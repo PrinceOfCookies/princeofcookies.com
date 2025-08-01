@@ -159,12 +159,11 @@ export default function Home() {
               <tr className="bg-neutral-900">
                 <td className="p-3 font-semibold text-yellow-400">
                   <a
-                    href="https://princeofcookies.tech"
+                    href="https://github.com/PrinceOfCookies/princeofcookies.tech"
                     className="font-semibold"
                   >
                     My Portfolio{" "}
                   </a>
-                  <em className="text-sm text-neutral-400">(Private)</em>
                 </td>
                 <td className="p-3">
                   This is the website you&#39;re currently viewing! My
