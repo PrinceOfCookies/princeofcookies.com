@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLock } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const router = useRouter();
@@ -122,8 +124,15 @@ export default function Home() {
             <tbody>
               <tr className="bg-neutral-900">
                 <td className="p-3 font-semibold text-pink-500">
+                  <em className="text-sm text-neutral-400">
+                    {" "}
+                    <FontAwesomeIcon
+                      icon={faLock}
+                      color="#9bb6ca"
+                      style={{ fontSize: "1.25em" }}
+                    />{" "}
+                  </em>
                   Low Sodium Hit System{" "}
-                  <em className="text-sm text-neutral-400">(Private)</em>
                 </td>
                 <td className="p-3">
                   Developing a hit system for a Garry&#39;s Mod server called{" "}
@@ -141,8 +150,15 @@ export default function Home() {
               </tr>
               <tr className="bg-neutral-900">
                 <td className="p-3 font-semibold text-pink-500">
-                  Fudgy Gmod DarkRP{" "}
-                  <em className="text-sm text-neutral-400">(Private)</em>
+                  <em className="text-sm text-neutral-400">
+                    {" "}
+                    <FontAwesomeIcon
+                      icon={faLock}
+                      color="#9bb6ca"
+                      style={{ fontSize: "1.25em" }}
+                    />{" "}
+                  </em>
+                  Fudgy DarkRP{" "}
                 </td>
                 <td className="p-3">
                   This is a Garry&#39;s mod server owned by a popular youtuber{" "}
@@ -235,14 +251,15 @@ export default function Home() {
                   </a>
                 </td>
                 <td className="p-3">
-                  This is a simple tool I made to automate the initial setup step of creating a GLua project.
+                  This is a simple tool I made to automate the initial setup
+                  step of creating a GLua project.
                 </td>
                 <td className="p-3"></td>
               </tr>
               <tr className="bg-neutral-900">
                 <td className="p-3 font-semibold text-green-700">
                   <a
-                    href="https://github.com/PrinceOfCookies/NoHud"
+                    href="https://github.com/PrinceOfCookies/NoHudMod"
                     className="font-semibold"
                   >
                     NoHud
@@ -271,7 +288,14 @@ export default function Home() {
                   </a>
                 </td>
                 <td className="p-3">
-                  CommandRelay is a tool I created for the Fudgys DarkRP Garry&#39;s Mod server. It uses a file generated when a specific setting is enabled during gameplay, which contains a simple chat log. Combined with the <code>-hijack</code> launch parameter for GMod, this allows me to implement custom chat commands without relying on cheats. Because of this method, the project is tailored specifically for that server but could likely be adapted to work with a generic console.log file.
+                  CommandRelay is a tool I created for the Fudgys DarkRP
+                  Garry&#39;s Mod server. It uses a file generated when a
+                  specific setting is enabled during gameplay, which contains a
+                  simple chat log. Combined with the <code>-hijack</code> launch
+                  parameter for GMod, this allows me to implement custom chat
+                  commands without relying on cheats. Because of this method,
+                  the project is tailored specifically for that server but could
+                  likely be adapted to work with a generic console.log file.
                 </td>
                 <td className="p-3"></td>
               </tr>
