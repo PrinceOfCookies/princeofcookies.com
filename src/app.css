@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -36,5 +37,5 @@ body {
 }
 
 .animate-blink {
-  animation: blink 1s step-end infinite;
+  animation: blink .75s step-end infinite;
 }
