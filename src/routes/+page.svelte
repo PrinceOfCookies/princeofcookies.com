@@ -36,7 +36,7 @@
       repoLink: "https://github.com/PrinceOfCookies/CookieOS",
       isPrivate: false,
       language: "lua",
-      moreinfo: "/CookieOS"
+      moreinfo: "/CookieOS",
     },
   ];
 
@@ -175,7 +175,7 @@
               language={project.language}
               isPrivate={project.isPrivate}
               tooltipContent={project.tooltipContent}
-			  moreinfo={project.moreinfo}
+              moreinfo={project.moreinfo}
             />
           {/each}
         </tbody>
@@ -209,11 +209,10 @@
       >
         YouTube channel,
       </a>
-       where I share gameplay videos, often edited by me or my friend
+      where I share gameplay videos, often edited by me or my friend
       <a href="https://youtube.com/@lifeline4603" class="underline">
         Lifeline.
       </a>
-      
     </p>
 
     <h2 class="text-2xl mb-4">🛠️ Open for Commissions</h2>

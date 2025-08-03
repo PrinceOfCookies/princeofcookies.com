@@ -1,41 +1,39 @@
 <script>
-  import clsx from 'clsx';
+  import clsx from "clsx";
 
   let modalSrc = null;
 
   const images = [
     [
-      'assets/o2wmqpm6nyngii4.webp',
-      'assets/kzsw5vz5lztfprd.webp',
-      'assets/84ttsjehfyimnfv.webp',
+      "assets/o2wmqpm6nyngii4.webp",
+      "assets/kzsw5vz5lztfprd.webp",
+      "assets/84ttsjehfyimnfv.webp",
     ],
-    ['assets/23kdhhvphycn0se.webp', 'assets/9e4l616kz3uo3xl.webp'],
+    ["assets/23kdhhvphycn0se.webp", "assets/9e4l616kz3uo3xl.webp"],
     [
-      'assets/7c4ekig77t73imc.webp',
-      'assets/0bowbf9ph9akz7a.webp',
-      'assets/kojywu2de9f0uwv.webp',
+      "assets/7c4ekig77t73imc.webp",
+      "assets/0bowbf9ph9akz7a.webp",
+      "assets/kojywu2de9f0uwv.webp",
     ],
   ];
 
   const sectionText = [
     {
-      title: 'General UI',
-      text:
-        "While the UI isn't the best, and is following a tutorial, it atleast exists and does its job. However, at some point I do plan on revamping the UI, I do not know when I plan to do this though",
+      title: "General UI",
+      text: "While the UI isn't the best, and is following a tutorial, it atleast exists and does its job. However, at some point I do plan on revamping the UI, I do not know when I plan to do this though",
     },
     {
-      title: 'Programs!',
-      text:
-        'Cookie"OS" has a couple programs, some of which are custom made by me, while some others are made by other people!',
+      title: "Programs!",
+      text: 'Cookie"OS" has a couple programs, some of which are custom made by me, while some others are made by other people!',
     },
     {
-      title: 'Base Program Replacements',
+      title: "Base Program Replacements",
       html: `This also offers some base program replacements, such as <code>ls</code>, <code>list</code>, <code>about</code>, <code>reboot</code>, <code>shutdown</code>, <code>shell</code>, and <code>screenfetch</code>. While most of these changes are small, both <code>ls</code>, and <code>list</code> (Since they are the same thing) have been changed quiet a bit to display more information about files/directories.`,
     },
   ];
 
   function onImageKeydown(event, src) {
-    if (event.key === 'Enter' || event.key === ' ') {
+    if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       modalSrc = src;
     }
@@ -55,18 +53,19 @@
       >
         CC:Tweaked,
       </a>
-      replacing several base functions, adding new programs, and featuring a basic UI.
+      replacing several base functions, adding new programs, and featuring a basic
+      UI.
     </p>
   </header>
 
   {#each images as group, idx}
     <section
       class={clsx(
-        'flex flex-col items-center gap-6 py-5 px-5 md:px-16 w-screen rounded-xl shadow-md',
-        idx === 1 ? 'md:flex-row-reverse' : 'md:flex-row',
+        "flex flex-col items-center gap-6 py-5 px-5 md:px-16 w-screen rounded-xl shadow-md",
+        idx === 1 ? "md:flex-row-reverse" : "md:flex-row",
         idx % 2 === 1
-          ? 'bg-gradient-to-l from-[#363533] to-[#0e0d0d]'
-          : 'bg-gradient-to-br from-[#1f1e1d] to-[#0e0d0d]'
+          ? "bg-gradient-to-l from-[#363533] to-[#0e0d0d]"
+          : "bg-gradient-to-br from-[#1f1e1d] to-[#0e0d0d]"
       )}
     >
       <div class="flex h-[215px]">
@@ -100,7 +99,7 @@
                   aria-label={`View image Section ${idx} Image ${i + 1}`}
                 >
                   <img
-                    src={src}
+                    {src}
                     alt={`Section ${idx} Image ${i + 1}`}
                     width="100"
                     height="75"
@@ -123,7 +122,7 @@
                 aria-label={`View image Section ${idx} Image ${i}`}
               >
                 <img
-                  src={src}
+                  {src}
                   alt={`Section ${idx} Image ${i}`}
                   width="100"
                   height="150"
@@ -138,9 +137,13 @@
       </div>
 
       <div class="flex-1 text-[#dcdcdc]">
-        <h2 class="text-[#e0e0e0] text-2xl font-normal mb-2">{sectionText[idx].title}</h2>
+        <h2 class="text-[#e0e0e0] text-2xl font-normal mb-2">
+          {sectionText[idx].title}
+        </h2>
         {#if sectionText[idx].html}
-          <p class="text-[#bfbfbf] leading-relaxed">{@html sectionText[idx].html}</p>
+          <p class="text-[#bfbfbf] leading-relaxed">
+            {@html sectionText[idx].html}
+          </p>
         {:else}
           <p class="text-[#bfbfbf] leading-relaxed">{sectionText[idx].text}</p>
         {/if}

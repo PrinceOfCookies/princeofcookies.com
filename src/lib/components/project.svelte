@@ -49,13 +49,16 @@
   </td>
   <td class="p-3">
     {#if moreinfo}
-        <button
-          class="inline-flex items-center text-cyan-400 hover:text-cyan-200 transition-colors"
-          on:click={() => goto(moreinfo)}
-          aria-label="More info"
-        >
-          <FontAwesomeIcon icon={faArrowRight} class="w-8 h-4 transition-transform duration-500 hover:scale-125 hover:rotate-[360deg]" />
-        </button>
+      <button
+        class="inline-flex items-center text-cyan-400 hover:text-cyan-200 transition-colors"
+        on:click={() => goto(moreinfo)}
+        aria-label="More info"
+      >
+        <FontAwesomeIcon
+          icon={faArrowRight}
+          class="w-8 h-4 transition-transform duration-500 hover:scale-125 hover:rotate-[360deg]"
+        />
+      </button>
     {/if}
   </td>
 </tr>

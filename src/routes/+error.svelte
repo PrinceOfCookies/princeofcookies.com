@@ -1,11 +1,11 @@
 <script>
-  import { goto } from '$app/navigation';
+  import { goto } from "$app/navigation";
   export let error;
   export let status;
 
   function goHome() {
-    goto('/').then(() => {
-      document.title = 'Portfolio - PrinceOfCookies';
+    goto("/").then(() => {
+      document.title = "Portfolio - PrinceOfCookies";
     });
   }
 </script>
@@ -13,6 +13,16 @@
 <svelte:head>
   <title>Page Not Found</title>
 </svelte:head>
+
+<div class="container">
+  <div class="box">
+    <h1>{status}</h1>
+    <p>
+      {error?.message ?? "Oops! The page you're looking for doesn't exist."}
+    </p>
+    <button class="back-btn" on:click={goHome}>Go Back Home</button>
+  </div>
+</div>
 
 <style>
   body {
@@ -26,7 +36,7 @@
     color: white;
     font-family: "Roboto", sans-serif;
     text-align: center;
-    margin-left: 11vh
+    margin-left: 11vh;
   }
   .box {
     max-width: 100vh;
@@ -54,11 +64,3 @@
     background-color: #0088cc;
   }
 </style>
-
-<div class="container">
-  <div class="box">
-    <h1>{status}</h1>
-    <p>{error?.message ?? "Oops! The page you're looking for doesn't exist."}</p>
-    <button class="back-btn" on:click={goHome}>Go Back Home</button>
-  </div>
-</div>
