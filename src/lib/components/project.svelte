@@ -15,6 +15,16 @@
     default: "text-gray-400",
   };
 
+  let showIcons = false;
+
+  if (typeof window !== "undefined") {
+    showIcons = !window.matchMedia("(max-width: 600px)").matches;
+
+    window.matchMedia("(max-width: 600px)").addEventListener("change", (e) => {
+      showIcons = !e.matches;
+    });
+  }
+
   $: colorClass = languageColors[language] || languageColors.default;
 
   export let name;
@@ -46,16 +56,18 @@
     {/if}
   </td>
   <td class="p-3">
-    <div class="grid grid-cols-2 gap-2 items-center">
-      {#if icons}
-        {#each icons as icon}
-          <img src={`/assets/icons/${icon}.svg`} alt={icon} class="w-6 h-6" />
-        {/each}
-      {/if}
-      <svg class="w-6 h-6" viewBox="0 0 24 24">
-        <use href="/assets/icons/static.svg#icon" />
-      </svg>
-    </div>
+    {#if showIcons}
+      <div class="grid grid-cols-2 gap-2 items-center">
+        {#if icons}
+          {#each icons as icon}
+            <img src={`/assets/icons/${icon}.svg`} alt={icon} class="w-6 h-6" />
+          {/each}
+        {/if}
+        <svg class="w-6 h-6" viewBox="0 0 24 24">
+          <use href="/assets/icons/static.svg#icon" />
+        </svg>
+      </div>
+    {/if}
   </td>
   <td class="p-3">
     {@html desc}
