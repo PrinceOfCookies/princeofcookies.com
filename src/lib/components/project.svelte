@@ -23,6 +23,7 @@
   export let isPrivate;
   export let tooltipContent;
   export let moreinfo;
+  export let icons;
 </script>
 
 <tr class="bg-neutral-900">
@@ -43,6 +44,18 @@
     {:else}
       <a href={repoLink} class="font-semibold">{name}</a>
     {/if}
+  </td>
+  <td class="p-3">
+    <div class="grid grid-cols-2 gap-2 items-center">
+      {#if icons}
+        {#each icons as icon}
+          <img src={`/assets/icons/${icon}.svg`} alt={icon} class="w-6 h-6" />
+        {/each}
+      {/if}
+      <svg class="w-6 h-6" viewBox="0 0 24 24">
+        <use href="/assets/icons/static.svg#icon" />
+      </svg>
+    </div>
   </td>
   <td class="p-3">
     {@html desc}
