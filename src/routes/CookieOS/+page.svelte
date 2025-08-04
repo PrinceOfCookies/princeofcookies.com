@@ -5,15 +5,15 @@
 
   const images = [
     [
-      "assets/o2wmqpm6nyngii4.webp",
-      "assets/kzsw5vz5lztfprd.webp",
-      "assets/84ttsjehfyimnfv.webp",
+      "assets/cookieos/o2wmqpm6nyngii4.webp",
+      "assets/cookieos/kzsw5vz5lztfprd.webp",
+      "assets/cookieos/84ttsjehfyimnfv.webp",
     ],
-    ["assets/23kdhhvphycn0se.webp", "assets/9e4l616kz3uo3xl.webp"],
+    ["assets/cookieos/23kdhhvphycn0se.webp", "assets/cookieos/9e4l616kz3uo3xl.webp"],
     [
-      "assets/7c4ekig77t73imc.webp",
-      "assets/0bowbf9ph9akz7a.webp",
-      "assets/kojywu2de9f0uwv.webp",
+      "assets/cookieos/7c4ekig77t73imc.webp",
+      "assets/cookieos/0bowbf9ph9akz7a.webp",
+      "assets/cookieos/kojywu2de9f0uwv.webp",
     ],
   ];
 
