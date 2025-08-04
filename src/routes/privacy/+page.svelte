@@ -26,7 +26,9 @@
   {/if}
 
   {#each policy as section}
-    <h2 class="text-xl font-semibold mt-8 mb-2">{section.name}</h2>
+    <h2 class="text-xl font-semibold mt-8 mb-2">
+      {section.number}. {section.name}
+    </h2>
 
     {#if section.description.includes("<li>")}
       <ul class="list-disc list-inside mb-4" use:html>{section.description}</ul>

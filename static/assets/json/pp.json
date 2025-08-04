@@ -3,47 +3,59 @@
         "effectiveDate": "August 4th, 2025"
     },
     {
+        "number": 1,
         "name": "About Us",
         "description": "princeofcookies.tech (“we”, “our”) respects your privacy. This policy explains what data we collect, why, how we use it, who can access it, and your rights under applicable laws."
     },
     {
-        "name": "What data We Collect & How",
+        "number": 2,
+        "name": "What Data We Collect & How",
         "description": "<li>\n      <strong>Automatically Collected:</strong> IP address, user agent, page route,\n      and time of access.\n    </li>\n    <li>\n      <strong>Host collection:</strong> Data collected by our hosting provider,\n      includes, but is not limited to, IP Address, user agent, and time of\n      access. To read more on what they collect, read their\n      <a href=\"https://novonode.com/privacy\" class=\"text-blue-400 underline\" target=\"_blank\" rel=\"noreferrer\">Privacy Policy</a>.\n    </li>"
     },
     {
+        "number": 3,
         "name": "Purposes & Legal Basis",
         "description": "<li>\n      <strong>Security:</strong> Detect abuse, ensure service integrity\n    </li>\n    <li>\n      <strong>General Analytics:</strong> Most visited pages, user interactions,\n      etc.\n    </li>\n    <li>\n      <strong>Operations:</strong> Run backend services and log usage\n    </li>",
         "extraTag": "mb-4",
         "extra": "Under GDPR, processing is based on legitimate interests necessary for the functioning and security of the service. Under CCPA: usage is limited to service analytics."
     },
     {
+        "number": 4,
         "name": "Data Retention",
         "description": "Data is retained as long as necessary for security, operations, or legal compliance, and may be deleted upon valid request as permitted by law."
     },
     {
-        "name": "Who can access your data",
+        "number": 5,
+        "name": "Who Can Access Your Data",
         "description": "<li>\n<strong>Hosting Provider:</strong> Data is stored with\n<a\nhref=\"https://novonode.com\"\nclass=\"text-blue-400 underline\"\ntarget=\"_blank\"\nrel=\"noreferrer\">Novonode</a\n>, which has technical access for server operations and security. See their\n<a\nhref=\"https://novonode.com/privacy\"\nclass=\"text-blue-400 underline\"\ntarget=\"_blank\"\nrel=\"noreferrer\">Privacy Policy</a\n>.\n</li>",
         "extraTag": "li",
         "extra": "<strong>No other third parties</strong> have access to your data. We do not sell, rent, or share it externally."
     },
     {
+        "number": 6,
         "name": "Children's Privacy",
         "description": "This site is not intended for individuals under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us data, contact us immediately."
     },
     {
-        "name": "Your rights (GDRP / CCPA)",
+        "number": 7,
+        "name": "Your Rights (GDPR / CCPA)",
         "description": "For more information on your rights under\n<a href=\"https://gdpr.eu\" class=\"text-blue-400 underline\" target=\"_blank\" rel=\"noreferrer\">GDPR</a>\nor\n<a href=\"https://oag.ca.gov/privacy/ccpa\" class=\"text-blue-400 underline\" target=\"_blank\" rel=\"noreferrer\">CCPA</a>, visit the official sources.",
         "extraTag": "mb-4",
         "extra": "To exercise these rights, email <a href=\"mailto:legal@princeofcookies.tech\" class=\"text-blue-400 underline\">legal@princeofcookies.tech</a> with enough information to verify your identity."
     },
     {
+        "number": 8,
         "name": "Changes to This Policy",
         "description": "This Privacy Policy may be updated periodically. Each update will have a new effective date. Continued use of this site means you agree to the updated terms."
     },
     {
+        "number": 9,
         "name": "Contact & Dispute Resolution",
-        "description": "For questions, requests, or complaints, contact us at <a href=\"mailto:legal@princeofcookies.tech\" class = \"text-blue-400 underline\"> legal@princeofcookies.tech</a>. If unresolved, you may contact your data protection authority (e.g., EU, DPA, CCPA authority).",
-        "extraTag": "mb-4",
-        "extra": "We follow GDPR for EU users and CCPA for California Residents. This policy is governed under the law of Canada (Novonode's jurisdiction) and other relevant regions."
+        "description": "For questions, requests, or complaints, contact us at <a href=\"mailto:legal@princeofcookies.tech\" class = \"text-blue-400 underline\"> legal@princeofcookies.tech</a>. If unresolved, you may contact your data protection authority (e.g., EU DPA, CCPA authority)."
+    },
+    {
+        "number": 10,
+        "name": "Governing Law",
+        "description": "We follow GDPR for EU users and CCPA for California Residents. This policy is governed under the law of Canada (Novonode's jurisdiction) and other relevant regions."
     }
 ]
