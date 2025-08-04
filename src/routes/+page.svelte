@@ -1,12 +1,16 @@
 <script>
   import { onMount } from "svelte";
   import Project from "$lib/components/project.svelte";
-  // test
+
   let typewriterText = "";
   const text = "I'm PrinceOfCookies";
   const speed = 75;
+  let favoriteProjects = [];
+  let projects = [];
 
-  onMount(() => {
+  onMount(async () => {
+    const res = await fetch("/assets/json/proj.json");
+    const data = await res.json();
     typewriterText = "";
     let index = 0;
     let timeoutId;
@@ -19,103 +23,11 @@
     }
     type();
 
+    favoriteProjects = data.favoriteProjects;
+    projects = data.projects;
+
     return () => clearTimeout(timeoutId);
   });
-
-  const favoriteProjects = [
-    {
-      name: "TS-CookieLang",
-      desc: 'A TypeScript project exploring the creation of a "language." Though unfinished, it was a great learning experience.',
-      repoLink: "https://github.com/PrinceOfCookies/TS-CookieLang",
-      isPrivate: false,
-      language: "ts",
-      icons: ["ts", "deno"],
-    },
-    {
-      name: "CookieOS",
-      desc: "A Minecraft mod project for CC:Tweaked, replacing several base functions, adding new programs, and featuring a basic UI.",
-      repoLink: "https://github.com/PrinceOfCookies/CookieOS",
-      isPrivate: false,
-      language: "lua",
-      moreinfo: "/CookieOS",
-      icons: ["lua"],
-    },
-  ];
-
-  const projects = [
-    {
-      name: "Low Sodium Hit System",
-      isPrivate: true,
-      tooltipContent: "Private repository",
-      language: "lua",
-      desc: `Developing a hit system for a Garry's Mod server called
-        <strong>Low Sodium</strong>. Join us on
-        <a href="https://discord.com/invite/BTjYMp3FWe" class="underline">Discord</a>.`,
-      icons: ["mysql", "lua"],
-    },
-    {
-      name: "Fudgy DarkRP",
-      isPrivate: true,
-      tooltipContent: "Private repository",
-      language: "lua",
-      desc: `This is a Garry's mod server owned by a popular youtuber
-        <a href="https://www.youtube.com/UCh7gme0kfhUZXG3NDqpeL_g" class="underline font-semibold">Fudgy</a>
-        that I'm a developer on.`,
-      icons: ["mysql", "lua"],
-    },
-    {
-      name: "My Portfolio",
-      repoLink: "https://github.com/PrinceOfCookies/princeofcookies.tech",
-      isPrivate: false,
-      language: "js",
-      desc: `This is the website you're currently viewing! My portfolio, showing a list of projects, what they are, along with some other information`,
-      icons: ["js", "sk", "tailwind", "node"],
-    },
-    {
-      name: "StrwRemastered",
-      repoLink: "https://github.com/PrinceOfCookies/StrwRemastered",
-      isPrivate: false,
-      language: "js",
-      desc: `This is a discord bot for the
-        <a href="https://discord.gg/rfYF3PSveM" class="underline font-semibold">Strawhat</a>
-        discord server, owned by my friend for his
-        <a href="https://www.youtube.com/@lifeline4603" class="underline font-semibold">YouTube channel</a>`,
-      icons: ["js", "mysql", "node"],
-    },
-    {
-      name: "Kitty Bot",
-      repoLink: "https://github.com/PrinceOfCookies/StrwRemastered",
-      isPrivate: false,
-      language: "js",
-      desc: `This is a simple discord bot that I made for fun, it spits out cat images using
-        <a href="https://thecatapi.com" class="underline font-semibold">thecatapi</a>`,
-      icons: ["js", "node"],
-    },
-    {
-      name: "AutoCreateGLUAProj",
-      repoLink: "https://github.com/PrinceOfCookies/AutoCreateGLUAProj",
-      isPrivate: false,
-      language: "js",
-      desc: `This is a simple tool I made to automate the initial setup step of creating a GLua project.`,
-      icons: ["js", "node"],
-    },
-    {
-      name: "NoHud",
-      repoLink: "https://github.com/PrinceOfCookies/NoHudMod",
-      isPrivate: false,
-      language: "cs",
-      desc: `<a href="https://thunderstore.io/c/lethal-company/p/Cookies/NoHud/" class="underline font-semibold">NoHud</a> is a simple Lethal Company mod that removes <em>almost</em> all HUD elements from your view. Toggleable by typing <code>!hidehud</code> in chat.`,
-      icons: ["cs"]
-    },
-    {
-      name: "CommandRelay",
-      repoLink: "https://github.com/PrinceOfCookies/CommandRelay",
-      isPrivate: false,
-      language: "rust",
-      desc: `CommandRelay is a tool I created for the Fudgys DarkRP Garry's Mod server. It uses a file generated when a specific setting is enabled during gameplay, which contains a simple chat log. Combined with the <code>-hijack</code> launch parameter for GMod, this allows me to implement custom chat commands without relying on cheats. Because of this method, the project is tailored specifically for that server but could likely be adapted to work with a generic console.log file.`,
-      icons: ["rust"],
-    },
-  ];
 </script>
 
 <main
