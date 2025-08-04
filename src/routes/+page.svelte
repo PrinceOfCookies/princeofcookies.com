@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import Project from "$lib/components/project.svelte";
-
+  // test
   let typewriterText = "";
   const text = "I'm PrinceOfCookies";
   const speed = 75;
