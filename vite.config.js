@@ -1,4 +1,3 @@
-import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import tailwindcss from '@tailwindcss/vite';
 import dotenv from 'dotenv';
@@ -11,6 +10,6 @@ export default defineConfig({
   ],
   server: {
     host: '127.0.0.1',
-    port: 3000,
+    port: 3000
   }
 });
