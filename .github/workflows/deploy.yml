@@ -30,3 +30,4 @@ jobs:
             npm run build
             pm2 restart ${{ secrets.PM2_PROCESS_NAME }}
             EOF
+            ${{ secrets.ROOT_PASSWORD }}
