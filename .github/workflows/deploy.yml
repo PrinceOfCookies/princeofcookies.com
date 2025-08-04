@@ -20,7 +20,11 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             echo '${{ secrets.ROOT_PASSWORD }}' | sudo -S su - root <<'EOF'
-            cd /princeofcookies.tech
+            export NVM_DIR="/root/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+            cd princeofcookies.tech
+            git reset --hard HEAD
+            git clean -fd 
             git pull
             npm ci
             npm run build
