@@ -20,9 +20,9 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             echo '${{ secrets.ROOT_PASSWORD }}' | sudo -S su - root <<'EOF'
-             cd /princeofcookies.tech
-             git pull
-             npm ci
-             npm run build
-             pm2 restart ${{ secrets.PM2_PROCESS_NAME }}
-             EOF
+            cd /princeofcookies.tech
+            git pull
+            npm ci
+            npm run build
+            pm2 restart ${{ secrets.PM2_PROCESS_NAME }}
+            EOF
