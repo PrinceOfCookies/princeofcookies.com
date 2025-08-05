@@ -11,14 +11,14 @@
   import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
 
   let mailtoLink =
-    "mailto:legal@princeofcookies.tech?subject=Data%20Redaction%20Request&body=Please%20redact%20my%20PII.";
+    "mailto:prince@strw.club?subject=Data%20Redaction%20Request&body=Please%20redact%20my%20PII.";
 
   onMount(async () => {
     try {
       const res = await fetch("https://api.ipify.org?format=json");
       const data = await res.json();
       if (data?.ip) {
-        mailtoLink = `mailto:legal@princeofcookies.tech?subject=Data%20Redaction%20Request&body=Please%20redact%20my%20PII%20associated%20with%20IP%20address%20${encodeURIComponent(
+        mailtoLink = `mailto:prince@strw.club?subject=Data%20Redaction%20Request&body=Please%20redact%20my%20PII%20associated%20with%20IP%20address%20${encodeURIComponent(
           data.ip
         )}`;
       }
