@@ -47,7 +47,7 @@
     <h1 class="text-4xl mb-6">👋 Hello!</h1>
     <p class="text-lg leading-relaxed mb-10">
       I am an <strong>18-year-old</strong> developer who enjoys coding, gaming,
-      and content creation. I love playing <strong> Garry's Mod</strong>, <strong> TF2</strong>, and
+      and content creation. I love playing <strong> Garry's Mod</strong>, <strong>TF2</strong>, and
       <strong> Minecraft</strong>, and I primarily code in
       <strong class="text-pink-500">Lua</strong> and
       <strong class="text-yellow-400"> JavaScript</strong>.
