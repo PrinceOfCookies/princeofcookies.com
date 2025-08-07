@@ -10,7 +10,7 @@
     {
         "number": 2,
         "name": "What Data We Collect & How",
-        "description": "<li>\n      <strong>Automatically Collected:</strong> IP address, user agent, page route,\n      and time of access.\n    </li>\n    <li>\n      <strong>Host collection:</strong> Data collected by our hosting provider,\n      includes, but is not limited to, IP Address, user agent, and time of\n      access. To read more on what they collect, read their\n      <a href=\"https://novonode.com/privacy\" class=\"text-blue-400 underline\" target=\"_blank\" rel=\"noreferrer\">Privacy Policy</a>.\n    </li>"
+        "description": "<li>\n      <strong>Automatically Collected:</strong> IP address, user agent, page route,\n      and time of access.\n    </li>\n    <li>\n      <strong>Host collection:</strong> Data collected by our hosting provider,\n      includes, but is not limited to, IP Address, user agent, and time of\n      access. To read more on what they collect, read their\n      <a href=\"https://novonode.com/privacy\" class=\"text-blue-400 underline\" target=\"_blank\" rel=\"noreferrer\">Privacy Policy</a>.\n    </li>\n<li> <strong>Authentication Cookies:</strong> We store cookies upon Discord OAuth login to keep you logged in and verify your identity when accessing the dashboard. These cookies expire after 12 hours. Using the dashboard is optional. </li>"
     },
     {
         "number": 3,
