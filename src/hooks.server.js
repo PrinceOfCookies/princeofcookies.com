@@ -9,9 +9,7 @@ export const handle = (async ({ event, resolve }) => {
         const user = event.locals.user;
 
         if (!user) throw redirect(302, '/');
-        console.log(user.id)
-        console.log(process.env.ADMIN_ID)
-        if (user.id !== process.env.ADMIN_ID) throw error(401, 'Unauthorized');
+        if (user.id !== '698793333178368040') throw error(401, 'Unauthorized');
     }
 
     return await resolve(event);
