@@ -36,7 +36,6 @@ export const GET = async ({ url }) => {
         const userData = userResponse.data;
 
         const sessionID = setSession(data, userData);
-
         return new Response('', {
             status: 307,
             headers: {
@@ -47,7 +46,7 @@ export const GET = async ({ url }) => {
                     secure: process.env.NODE_ENV === 'production',
                     maxAge: data.expires_in
                 }),
-                Location: '/d'
+                Location: '/dash'
             },
         })
     } catch (error) {

@@ -25,7 +25,7 @@ export function fetchSession(sessionID) {
     delete session.scope;
     delete session.token_type;
 
-    return s;
+    return session;
   }
 
   return null;
