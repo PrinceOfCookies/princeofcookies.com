@@ -25,9 +25,6 @@
 </div>
 
 <style>
-  body {
-    margin: 0;
-  }
   .container {
     display: grid;
     justify-content: center;
