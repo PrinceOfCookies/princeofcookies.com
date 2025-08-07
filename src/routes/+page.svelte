@@ -1,15 +1,28 @@
 <script>
+  // External
   import { onMount } from "svelte";
-  import Project from "$lib/components/project.svelte";
-  import { SignIn, SignOut } from "@auth/sveltekit/components";
   import { page } from "$app/stores";
   import { PUBLIC_DISCORD_AUTH_URI } from "$env/static/public";
 
+  // Internal
+  import Project from "$lib/components/project.svelte";
+
+  // User Session
+  export let user;
+  async function logout() {
+    await fetch("/api/v1/user/logout", {
+      method: "POST", 
+      body: JSON.stringify({}),
+    });
+  }
+
+  // Type anim
   let typewriterText = "";
   const text = "I'm PrinceOfCookies";
   const speed = 75;
   let favoriteProjects = [];
   let projects = [];
+
 
   onMount(async () => {
     const res = await fetch("/assets/json/proj.json");
@@ -47,26 +60,23 @@
   </div>
 
   <div class="absolute top-5 right-5 z-50">
-    <!-- {#if $page.data.session}
-      <SignOut>
-        <button
-          type="submit"
-          class="display:inline bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded mr-2"
-        >
-          Log out
-        </button>
-      </SignOut>
-    {:else} -->
-      <!-- <SignIn> -->
-        <button
-          type="submit"
-          class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
-          on:click={() => (window.location.href = PUBLIC_DISCORD_AUTH_URI)}
-        >
-          Login
-        </button>
-      <!-- </SignIn>
-    {/if} -->
+    {#if user}
+      <button
+        type="submit"
+        class="display:inline bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded mr-2"
+        on:click={logout}
+      >
+        Log out
+      </button>
+    {:else}
+      <button
+        type="submit"
+        class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+        on:click={() => (window.location.href = PUBLIC_DISCORD_AUTH_URI)}
+      >
+        Login
+      </button>
+    {/if}
   </div>
   <div class="flex flex-col items-center mt-20">
     <section class="max-w-5xl w-full py-10 pt-25">
