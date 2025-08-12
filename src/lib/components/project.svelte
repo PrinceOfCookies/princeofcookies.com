@@ -12,6 +12,8 @@
     ts: "text-blue-500",
     rust: "text-orange-500",
     lua: "text-pink-500",
+    jssk: "bg-gradient-to-r from-orange-300 to-yellow-500 text-transparent bg-clip-text", // JS & Sveltekit
+    jslua: "bg-gradient-to-r from-pink-300 to-yellow-500 text-transparent bg-clip-text", // JS & Lua
     default: "text-gray-400",
   };
 

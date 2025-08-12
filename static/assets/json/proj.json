@@ -36,10 +36,18 @@
       "icons": ["mysql", "lua"]
     },
     {
+      "name": "GmodChatRelay",
+      "repoLink": "https://github.com/PrinceOfCookies/GmodChatRelay",
+      "isPrivate": false,
+      "language": "jslua",
+      "desc": "A tool to have discord and Garry's Mod chat relay using websockets. This allows real-time communication between the two platforms.",
+      "icons": ["js", "lua", "ws"]
+    },
+    {
       "name": "My Portfolio",
       "repoLink": "https://github.com/PrinceOfCookies/princeofcookies.tech",
       "isPrivate": false,
-      "language": "js",
+      "language": "jssk",
       "desc": "This is the website you're currently viewing! My portfolio, showing a list of projects, what they are, along with some other information",
       "icons": ["js", "sk", "tailwind", "node"]
     },
