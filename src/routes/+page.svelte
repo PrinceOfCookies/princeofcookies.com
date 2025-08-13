@@ -11,7 +11,7 @@
   export let user;
   async function logout() {
     await fetch("/api/v1/user/logout", {
-      method: "POST", 
+      method: "POST",
       body: JSON.stringify({}),
     });
   }
@@ -23,6 +23,15 @@
   let favoriteProjects = [];
   let projects = [];
 
+  let pc = false;
+
+  if (typeof window !== "undefined") {
+    pc = !window.matchMedia("(max-width: 600px)").matches;
+
+    window.matchMedia("(max-width: 600px)").addEventListener("change", (e) => {
+      pc = !e.matches;
+    });
+  }
 
   onMount(async () => {
     const res = await fetch("/assets/json/proj.json");
@@ -59,25 +68,27 @@
     </h1>
   </div>
 
-  <div class="absolute top-5 right-5 z-50">
-    {#if user}
-      <button
-        type="submit"
-        class="display:inline bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded mr-2"
-        on:click={logout}
-      >
-        Log out
-      </button>
-    {:else}
-      <button
-        type="submit"
-        class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
-        on:click={() => (window.location.href = PUBLIC_DISCORD_AUTH_URI)}
-      >
-        Login
-      </button>
-    {/if}
-  </div>
+  {#if pc}
+    <div class="absolute top-5 right-5 z-50">
+      {#if user}
+        <button
+          type="submit"
+          class="display:inline bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded mr-2"
+          on:click={logout}
+        >
+          Log out
+        </button>
+      {:else}
+        <button
+          type="submit"
+          class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+          on:click={() => (window.location.href = PUBLIC_DISCORD_AUTH_URI)}
+        >
+          Login
+        </button>
+      {/if}
+    </div>
+  {/if}
   <div class="flex flex-col items-center mt-20">
     <section class="max-w-5xl w-full py-10 pt-25">
       <h1 class="text-4xl mb-6">👋 Hello!</h1>
