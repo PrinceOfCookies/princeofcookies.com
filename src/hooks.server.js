@@ -1,5 +1,5 @@
+// hooks.server.js
 import { fetchSession } from "$lib/server/sessionHandler";
-import { initWebSocket } from "$lib/server/websocket";
 import { redirect, error } from "@sveltejs/kit";
 
 export const handle = async ({ event, resolve }) => {
@@ -13,8 +13,5 @@ export const handle = async ({ event, resolve }) => {
     if (user.id !== "698793333178368040") throw error(401, "Unauthorized");
   }
 
-  if (event.platform?.httpServer) {
-    initWebSocket(event.platform.httpServer);
-  }
   return await resolve(event);
 };
