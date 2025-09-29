@@ -10,7 +10,7 @@
 
   onMount(() => {
     fetchStatus();
-    const interval = setInterval(fetchStatus, 5000); // poll every 5s
+    const interval = setInterval(fetchStatus, 61000); // poll every 61s
     return () => clearInterval(interval);
   });
 </script>

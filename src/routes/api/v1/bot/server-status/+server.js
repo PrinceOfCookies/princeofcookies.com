@@ -22,7 +22,7 @@ export async function POST({ request }) {
   if (timeoutId) clearTimeout(timeoutId);
   timeoutId = setTimeout(() => {
     botStatus = false;
-  }, 20000);
+  }, 70000);
 
   return json({ online: botStatus });
 }
