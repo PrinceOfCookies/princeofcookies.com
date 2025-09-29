@@ -1,2 +1,2 @@
-import { initWebSocket } from './build/lib/server/websocket.js';
+import { initWebSocket } from './lib/server/websocket.js';
 initWebSocket(server);

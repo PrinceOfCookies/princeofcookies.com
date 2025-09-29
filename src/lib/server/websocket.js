@@ -5,22 +5,31 @@ let botStatus = "offline";
 let refreshTimeout = null;
 
 export function initWebSocket(server) {
-  if (wss) return wss;
+  if (wss) {
+    console.log("WebSocketServer already initialized.");
+    return wss;
+  }
 
   wss = new WebSocketServer({ server });
   const paths = ["/bhb"]; // Add more paths here if needed
   const allowedIPs = [process.env.NOVO_ALLOW_IP, "::1"];
 
+  console.log("WebSocketServer initialized.");
+
   wss.on("connection", (ws, req) => {
     const path = req.url;
     const ip = (req.socket.remoteAddress || "").replace(/^::ffff:/, "");
 
+    console.log(`New connection: path=${path}, ip=${ip}`);
+
     if (!paths.includes(path)) {
+      console.log(`Connection rejected: Invalid path (${path})`);
       ws.close(1008, "Invalid path");
       return;
     }
 
     if (!allowedIPs.includes(ip)) {
+      console.log(`Connection rejected: Unauthorized IP (${ip})`);
       ws.close(1008, "Unauthorized");
       return;
     }
@@ -35,10 +44,12 @@ export function initWebSocket(server) {
     function refreshTime() {
       clearTimeout(refreshTimeout);
       refreshTimeout = setTimeout(setOfflineStatus, 10000);
+      console.log("Bot status refresh timeout reset.");
     }
 
     ws.on("message", (message) => {
       const text = message.toString();
+      console.log(`Received message: ${text}`);
       if (text === "ping") {
         if (botStatus !== "online") {
           botStatus = "online";
@@ -49,6 +60,7 @@ export function initWebSocket(server) {
     });
 
     ws.on("close", () => {
+      console.log("Connection closed.");
       clearTimeout(refreshTimeout);
       setOfflineStatus();
     });
@@ -58,5 +70,6 @@ export function initWebSocket(server) {
 }
 
 export function getBotStatus() {
+  console.log(`getBotStatus called: ${botStatus}`);
   return botStatus;
 }
