@@ -1,15 +1,35 @@
 <script>
+  import { onMount } from 'svelte';
+
     let currentTab = 'Dash';
     const tabs = ['Dash', 'User Management', 'Logs', 'Config'];
 
     import Dashboard from './elements/dashboard.svelte';
     import UserManagement from './elements/usermgnmt.svelte';
+    let serverMembers = 0
+    let bannedMembers = 0
+    let commandsUsed = 0 
+
+    async function fetchStats() {
+        const res = await fetch('/api/v1/bot/stats');
+        const data = await res.json();
+        serverMembers = data.users;
+        bannedMembers = data.banned;
+        commandsUsed = data.commands;
+    }
+
     let stats = [
         { label: 'Guild Users', value: 1200 },
         { label: 'Banned Users', value: 300 },
         { label: 'Commands Used', value: 4500 },
         { label: 'Last vid uploaded', value: 150 }
     ];
+
+    onMount(() => {
+        fetchStats();
+        const interval = setInterval(fetchStats, 1800000); // poll every 30 minutes
+        return () => clearInterval(interval);
+    });
 </script>
 
 <div class="flex flex-col h-screen">
