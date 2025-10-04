@@ -32,7 +32,7 @@
       "isPrivate": true,
       "tooltipContent": "Private repository",
       "language": "lua",
-      "desc": "This is a Garry's mod server owned by a popular youtuber <a href=\"https://www.youtube.com/UCh7gme0kfhUZXG3NDqpeL_g\" class=\"underline font-semibold\">Fudgy</a> that I'm a developer on.",
+      "desc": "This is a Garry's mod server owned by a popular youtuber <a href=\"https://www.youtube.com/UCh7gme0kfhUZXG3NDqpeL_g\" class=\"underline font-semibold\">Fudgy</a> that I'm the developer on.",
       "icons": ["mysql", "lua"]
     },
     {
