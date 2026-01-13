@@ -1,7 +1,6 @@
 <script>
   // External
   import { onMount } from "svelte";
-  import { page } from "$app/stores";
   import { PUBLIC_DISCORD_AUTH_URI } from "$env/static/public";
 
   // Internal
@@ -20,22 +19,29 @@
   let typewriterText = "";
   const text = "I'm PrinceOfCookies";
   const speed = 75;
+
   let favoriteProjects = [];
   let projects = [];
 
   let pc = false;
 
-  if (typeof window !== "undefined") {
-    pc = !window.matchMedia("(max-width: 600px)").matches;
-
-    window.matchMedia("(max-width: 600px)").addEventListener("change", (e) => {
-      pc = !e.matches;
-    });
-  }
-
   onMount(async () => {
+    // viewport check
+    const mq = window.matchMedia("(max-width: 600px)");
+    pc = !mq.matches;
+    const handler = (e) => {
+      pc = !e.matches;
+    };
+    mq.addEventListener("change", handler);
+
+    // load projects
     const res = await fetch("/assets/json/proj.json");
     const data = await res.json();
+
+    favoriteProjects = data.favoriteProjects ?? [];
+    projects = data.projects ?? [];
+
+    // typewriter
     typewriterText = "";
     let index = 0;
     let timeoutId;
@@ -46,139 +52,223 @@
         timeoutId = setTimeout(type, speed);
       }
     }
+
     type();
 
-    favoriteProjects = data.favoriteProjects;
-    projects = data.projects;
-
-    return () => clearTimeout(timeoutId);
+    return () => {
+      mq.removeEventListener("change", handler);
+      clearTimeout(timeoutId);
+    };
   });
 </script>
 
-<main
-  class="flex flex-col items-center justify-center min-h-screen bg-neutral-950 text-neutral-100 p-4"
->
-  <div
-    class="typewriter absolute top-16 left-1/2 transform -translate-x-1/2 text-center inline-block"
+<main class="min-h-screen bg-[#020308] text-neutral-100 flex flex-col">
+  <!-- Top bar -->
+  <header
+    class="fixed top-0 left-0 right-0 z-40 border-b border-neutral-900 bg-black/50 backdrop-blur-sm"
   >
-    <h1
-      class="text-4xl font-bold whitespace-nowrap overflow-hidden border-r-4 border-gray-300 animate-blink"
-    >
-      {typewriterText}
-    </h1>
-  </div>
+    <div class="mx-auto max-w-6xl px-4 md:px-8 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-2 text-sm tracking-[0.18em] text-neutral-400">
+        
+        <span>MY PORTFOLIO</span>
+      </div>
 
-  {#if pc}
-    <div class="absolute top-5 right-5 z-50">
-      {#if user}
-        <button
-          type="submit"
-          class="display:inline bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded mr-2"
-          on:click={logout}
-        >
-          Log out
-        </button>
-      {:else}
-        <button
-          type="submit"
-          class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
-          on:click={() => (window.location.href = PUBLIC_DISCORD_AUTH_URI)}
-        >
-          Login
-        </button>
+      {#if pc}
+        <div class="flex items-center gap-2">
+          {#if user}
+            <button
+              type="button"
+              class="px-3 py-1.5 text-xs font-medium rounded-full border border-neutral-700 bg-neutral-900/80 hover:border-bg-gray-700hover:text-bg-gray-700 transition-colors"
+              on:click={logout}
+            >
+              Log out
+            </button>
+          {:else}
+            <button
+              type="button"
+              class="bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-bold py-2 px-4 rounded mr-2"
+              on:click={() => (window.location.href = PUBLIC_DISCORD_AUTH_URI)}
+            >
+              Login with Discord
+            </button>
+          {/if}
+        </div>
       {/if}
     </div>
-  {/if}
-  <div class="flex flex-col items-center mt-20">
-    <section class="max-w-5xl w-full py-10 pt-25">
-      <h1 class="text-4xl mb-6">👋 Hello!</h1>
-      <p class="text-lg leading-relaxed mb-10">
-        I am an <strong>18-year-old</strong> developer who enjoys coding,
-        gaming, and content creation. I love playing
-        <strong> Garry's Mod</strong>,
-        <strong>TF2</strong>, and
-        <strong> Minecraft</strong>, and I primarily code in
-        <strong class="text-pink-500">Lua</strong> and
-        <strong class="text-yellow-400"> JavaScript</strong>.
-      </p>
+  </header>
 
-      <h2 class="text-2xl mb-4">🎯 Favorite Projects</h2>
-      <div class="overflow-x-auto mb-10">
-        <table class="w-full table-auto">
-          <thead>
-            <tr class="bg-neutral-800">
-              <th class="p-3 text-left w-48">Project</th>
-              <th class="p-3 w-24"></th>
-              <th class="p-3 text-left">Description</th>
-              <th class="p-3"></th>
-            </tr>
-          </thead>
-          <tbody>
-            {#each favoriteProjects as favproject}
-              <Project
-                name={favproject.name}
-                repoLink={favproject.repoLink}
-                desc={favproject.desc}
-                language={favproject.language}
-                isPrivate={favproject.isPrivate}
-                moreinfo={favproject.moreinfo}
-                icons={favproject.icons}
-              />
-            {/each}
-          </tbody>
-        </table>
+  <div class="flex-1 pt-16">
+    <!-- Hero: "I'm PrinceOfCookies" + GitHub on the right -->
+    <section class="px-4 md:px-8 py-10 md:py-14">
+      <div class="mx-auto max-w-6xl grid gap-10 md:grid-cols-[minmax(0,2.1fr)_minmax(0,1.4fr)] items-start">
+        <!-- Left: Hello / bio -->
+        <div class="space-y-6">
+          <div class="inline-flex flex-col gap-2">
+            <span class="text-xs uppercase tracking-[0.2em] text-neutral-500">
+              PRINCEOFCOOKIES
+            </span>
+            <h1
+              class="text-3xl md:text-4xl font-semibold text-neutral-100 whitespace-nowrap overflow-hidden border-r border-neutral-500 pr-1"
+            >
+              {typewriterText}
+            </h1>
+          </div>
+
+          <p class="text-sm md:text-base leading-relaxed text-neutral-300 max-w-xl">
+            I am an <span class="font-medium">18-year-old</span> developer who codes
+            because it’s what I end up doing whether I plan to or not. I run games,
+            break things, fix them, and keep going. I play a lot of
+            <span class="font-medium"> Garry's Mod</span>,
+            <span class="font-medium"> TF2</span>, and
+            <span class="font-medium"> Minecraft</span>, and most of what I make
+            comes from wanting those experiences to run the way I think they should.
+          </p>
+
+          <p class="text-sm md:text-base leading-relaxed text-neutral-400 max-w-xl">
+            I work in
+            <span class="text-pink-400 font-medium"> Lua</span> and
+            <span class="text-amber-300 font-medium"> JavaScript</span>. However I do know a little bit of <spam class=text-green-700 font-medium> C#</spam>, and <spam class="text-orange-500"> Rust</spam> and I use them in some of my projects!
+          </p>
+        </div>
+
+        <div
+          class="rounded-xl border border-neutral-900 bg-black/60 p-4 md:p-5 flex flex-col gap-3"
+        >
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs uppercase tracking-[0.18em] text-neutral-500">
+              GITHUB
+            </span>
+            <span class="text-[10px] text-neutral-500">
+              princeofcookies
+            </span>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <img
+              src="https://github-readme-stats-drab-two-38.vercel.app/api?username=PrinceOfCookies&show_icons=true&layout=compact&theme=dark&card_width=200px&hide=issues&stars&line_height=24px&ring_color=045dda&icon_color=0c5482&text_color=37656b&title_color=045ddb"
+              alt="GitHub stats"
+              width="400"
+              height="200"
+              class="rounded"
+              loading="lazy"
+            />
+            <img
+              src="https://github-readme-stats-drab-two-38.vercel.app/api/top-langs/?username=PrinceOfCookies&layout=compact&theme=dark&title_color=045ddb"
+              alt="Top Languages"
+              width="400"
+              height="150"
+              class="rounded"
+              loading="lazy"
+            />
+          </div>
+        </div>
       </div>
+    </section>
 
-      <h2 class="text-2xl mb-4">🔨 Projects</h2>
-      <div class="overflow-x-auto mb-10">
-        <table class="w-full table-auto">
-          <thead>
-            <tr class="bg-neutral-800">
-              <th class="p-3 text-left">Project</th>
-              <th class="p-3 w-24"></th>
-              <th class="p-3 text-left">Description</th>
-              <th class="p-3"></th>
-            </tr>
-          </thead>
-          <tbody>
-            {#each projects as project}
-              <Project
-                name={project.name}
-                repoLink={project.repoLink}
-                desc={project.desc}
-                language={project.language}
-                isPrivate={project.isPrivate}
-                tooltipContent={project.tooltipContent}
-                moreinfo={project.moreinfo}
-                icons={project.icons}
-              />
-            {/each}
-          </tbody>
-        </table>
+    <!-- Favorite Projects (same structure as your original, recolored) -->
+    <section class="px-4 md:px-8 pb-10">
+      <div class="mx-auto max-w-6xl space-y-3">
+        <div class="flex items-end justify-between gap-4">
+          <div>
+            <h2 class="text-xl md:text-2xl font-semibold text-neutral-100">
+              Favorite projects
+            </h2>
+            <p class="text-xs md:text-sm text-neutral-500">
+              A short list of projects that I really loved doing
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-xl border border-neutral-900 bg-black/60 overflow-hidden shadow-[0_0_0_1px_rgba(0,0,0,0.5)]"
+        >
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead class="bg-neutral-950/90 border-b border-neutral-900">
+                <tr class="text-xs text-neutral-400">
+                  <th class="px-4 py-3 text-left w-52 font-normal">Project</th>
+                  <th class="px-2 py-3 w-24 font-normal"></th>
+                  <th class="px-4 py-3 text-left font-normal">Description</th>
+                  <th class="px-3 py-3 font-normal"></th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-neutral-900/80">
+                {#each favoriteProjects as favproject}
+                  <Project
+                    name={favproject.name}
+                    repoLink={favproject.repoLink}
+                    desc={favproject.desc}
+                    language={favproject.language}
+                    isPrivate={favproject.isPrivate}
+                    moreinfo={favproject.moreinfo}
+                    icons={favproject.icons}
+                  />
+                {/each}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <h2 class="text-2xl mb-4">🤖 Github Info</h2>
-      <div class="flex flex-col md:flex-row gap-4 mb-10">
-        <img
-          src="https://github-readme-stats.vercel.app/api?username=PrinceOfCookies&show_icons=true&layout=compact&theme=dark&card_width=200px&hide=issues&stars&line_height=24px&ring_color=045dda&icon_color=0c5482&text_color=37656b&title_color=045ddb"
-          alt="GitHub stats"
-          width="400"
-          height="200"
-          class="rounded"
-        />
-        <img
-          src="https://github-readme-stats.vercel.app/api/top-langs/?username=PrinceOfCookies&layout=compact&theme=dark&title_color=045ddb"
-          alt="Top Languages"
-          width="280"
-          height="150"
-          class="rounded"
-        />
+    <!-- All Projects -->
+    <section class="px-4 md:px-8 pb-10">
+      <div class="mx-auto max-w-6xl space-y-3">
+        <div class="flex items-end justify-between gap-4">
+          <div>
+            <h2 class="text-xl md:text-2xl font-semibold text-neutral-100">
+              Projects
+            </h2>
+            <p class="text-xs md:text-sm text-neutral-500">
+              Some other projects that I liked working on
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-xl border border-neutral-900 bg-black/60 overflow-hidden shadow-[0_0_0_1px_rgba(0,0,0,0.5)]"
+        >
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead class="bg-neutral-950/90 border-b border-neutral-900">
+                <tr class="text-xs text-neutral-400">
+                  <th class="px-4 py-3 text-left w-52 font-normal">Project</th>
+                  <th class="px-2 py-3 w-24 font-normal"></th>
+                  <th class="px-4 py-3 text-left font-normal">Description</th>
+                  <th class="px-3 py-3 font-normal"></th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-neutral-900/80">
+                {#each projects as project}
+                  <Project
+                    name={project.name}
+                    repoLink={project.repoLink}
+                    desc={project.desc}
+                    language={project.language}
+                    isPrivate={project.isPrivate}
+                    tooltipContent={project.tooltipContent}
+                    moreinfo={project.moreinfo}
+                    icons={project.icons}
+                  />
+                {/each}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <h2 class="text-2xl mb-4">🎮 Content Creation</h2>
-      <p class="mb-10">
-        I'm also a <strong>YouTuber</strong>! Check out my
-        <a
+    <!-- Content + Commissions side by side (from the earlier layout) -->
+    <section class="px-4 md:px-8 pb-14">
+      <div
+        class="mx-auto max-w-6xl grid gap-10 md:grid-cols-2 border-t border-neutral-900 pt-10"
+      >
+        <div class="space-y-4">
+          <h2 class="text-xl md:text-2xl font-semibold text-neutral-100">
+            Content
+          </h2>
+          <p class="text-sm md:text-base leading-relaxed text-neutral-300">
+            I also run a         <a
           href="https://youtube.com/@princeofcookies?si=1ZGVREywISFAEnwY"
           class="underline"
         >
@@ -190,17 +280,26 @@
         </a>
       </p>
 
-      <h2 class="text-2xl mb-4">🛠️ Open for Commissions</h2>
-      <p class="mb-10">
-        Need a <strong>simple Discord bot</strong>? I'm available for hire!
-        Reach out to me via
-        <a
-          href="https://discord.com/users/698793333178368040"
-          class="underline"
-        >
-          Discord.
-        </a>
-      </p>
+        </div>
+
+        <div class="space-y-4">
+          <h2 class="text-xl md:text-2xl font-semibold text-neutral-100">
+            Commissions
+          </h2>
+          <p class="text-sm md:text-base leading-relaxed text-neutral-300">
+            Need a <strong>simple Discord bot</strong>? Hiring developers for your <strong>Gmod server</strong>? I'm available for hire!
+          </p>
+          <p class="text-sm text-neutral-400">
+            Contact via
+            <a
+              href="https://discord.com/users/698793333178368040"
+              class="underline decoration-neutral-600 hover:decoration-orange-500 underline-offset-4"
+            >
+              Discord
+            </a>.
+          </p>
+        </div>
+      </div>
     </section>
   </div>
 </main>
