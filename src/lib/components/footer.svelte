@@ -31,69 +31,78 @@
 </script>
 
 <footer
-  class="bg-neutral-950 py-10 pt-5 text-center border-t border-neutral-800"
+  class="bg-[#020308] border-t border-neutral-900 py-10 pt-6 text-center"
 >
-  <div class="flex justify-center gap-6 text-2xl mb-4">
+  <div class="flex justify-center gap-6 text-xl mb-6">
     <a
       href="https://github.com/PrinceOfCookies"
       target="_blank"
       rel="noreferrer"
-      class="transition-transform duration-200 hover:scale-125"
+      class="p-2 rounded-md bg-black/40 border border-neutral-900 hover:border-neutral-700 hover:bg-black/60 transition-colors"
     >
-      <FontAwesomeIcon icon={faGithub} style="color: white;" />
+      <FontAwesomeIcon icon={faGithub} class="text-neutral-300" />
     </a>
+
     <a
       href="https://youtube.com/@princeofcookies?si=1ZGVREywISFAEnwY"
       target="_blank"
       rel="noreferrer"
-      class="transition-transform duration-200 hover:scale-125"
+      class="p-2 rounded-md bg-black/40 border border-neutral-900 hover:border-neutral-700 hover:bg-black/60 transition-colors"
     >
-      <FontAwesomeIcon icon={faYoutube} style="color: white;" />
+      <FontAwesomeIcon icon={faYoutube} class="text-neutral-300" />
     </a>
+
     <a
       href="https://discord.com/users/698793333178368040"
       target="_blank"
       rel="noreferrer"
-      class="transition-transform duration-200 hover:scale-125"
+      class="p-2 rounded-md bg-black/40 border border-neutral-900 hover:border-neutral-700 hover:bg-black/60 transition-colors"
     >
-      <FontAwesomeIcon icon={faDiscord} style="color: white;" />
+      <FontAwesomeIcon icon={faDiscord} class="text-neutral-300" />
     </a>
+
     <a
       href="mailto:prince@strw.club"
       target="_blank"
       rel="noreferrer"
-      class="transition-transform duration-200 hover:scale-125"
+      class="p-2 rounded-md bg-black/40 border border-neutral-900 hover:border-neutral-700 hover:bg-black/60 transition-colors"
     >
-      <FontAwesomeIcon icon={faEnvelope} style="color: white;" />
+      <FontAwesomeIcon icon={faEnvelope} class="text-neutral-300" />
     </a>
   </div>
 
-  <p class="text-sm text-neutral-400">
-    &copy; 2025 PrinceOfCookies. All rights reserved.
-    {" | "}
+  <p class="text-sm text-neutral-500 leading-relaxed">
+    © 2026 PrinceOfCookies
+    <span class="mx-2 text-neutral-700">•</span>
+
     <span
-      class="underline hover:text-neutral-200 transition-colors cursor-pointer"
+      class="underline decoration-neutral-700 hover:decoration-orange-500 hover:text-neutral-300 transition-colors cursor-pointer"
       tabindex="0"
       role="button"
       on:click={goPrivacy}
-      on:keydown={(e) => e.key === "Enter" && goPrivacy()}
+      on:keydown={(e) => e.key === 'Enter' && goPrivacy()}
     >
       Privacy Policy
     </span>
-    {" | "}
+
+    <span class="mx-2 text-neutral-700">•</span>
+
     <a
       href={mailtoLink}
       target="_blank"
       rel="noreferrer"
-      class="underline text-neutral-400"
+      class="underline decoration-neutral-700 hover:decoration-orange-500 hover:text-neutral-300 transition-colors"
     >
-      Request redaction of my{" "}
+      Request data redaction
     </a>
+
+    <span class="mx-2 text-neutral-700">•</span>
+
     <a
       href="https://gdpr.eu/article-4-definitions/"
       target="_blank"
       rel="noreferrer"
-      class="underline text-natural-400 hover:text-blue-500 transition-colors font-semibold"
+      class="underline decoration-neutral-700 hover:decoration-orange-500 hover:text-neutral-300 transition-colors"
     >
       PII
     </a>

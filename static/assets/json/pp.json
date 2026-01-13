@@ -1,17 +1,17 @@
 [
     {
-        "effectiveDate": "August 4th, 2025"
+        "effectiveDate": "January 13th, 2026"
     },
     {
         "number": 1,
         "name": "About Us",
-        "description": "princeofcookies.tech (“we”, “our”) respects your privacy. This policy explains what data we collect, why, how we use it, who can access it, and your rights under applicable laws."
+        "description": "princeofcookies.tech (“we”, “our”) is a personal portfolio site and dashboard operated by an individual developer. We respect your privacy. This policy explains what data we collect, why, how we use it, who can access it, and your rights under applicable laws."
     },
-    {
-        "number": 2,
-        "name": "What Data We Collect & How",
-        "description": "<li>\n      <strong>Automatically Collected:</strong> IP address, user agent, page route,\n      and time of access.\n    </li>\n    <li>\n      <strong>Host collection:</strong> Data collected by our hosting provider,\n      includes, but is not limited to, IP Address, user agent, and time of\n      access. To read more on what they collect, read their\n      <a href=\"https://novonode.com/privacy\" class=\"text-blue-400 underline\" target=\"_blank\" rel=\"noreferrer\">Privacy Policy</a>.\n    </li>\n<li> <strong>Authentication Cookies:</strong> We store cookies upon Discord OAuth login to keep you logged in and verify your identity when accessing the dashboard. These cookies expire after 12 hours. Using the dashboard is optional. </li>"
-    },
+{
+  "number": 2,
+  "name": "What Data We Collect & How",
+  "description": "<li><strong>Automatically Collected:</strong> IP address, user agent, page route, referrer (if present), HTTP method, and time of access.</li><li><strong>Host collection:</strong> Data collected by our hosting provider,\n includes, but is not limited to, IP Address, user agent, and time of\n access. To read more on what they collect, read their\n <a href=\"https://novonode.com/privacy\" class=\"text-blue-400 underline\" target=\"_blank\" rel=\"noreferrer\">Privacy Policy</a>.\n </li>\n<li><strong>Authentication Cookies / Account Data:</strong> When you log in with Discord OAuth, we receive and may store your Discord user ID, username, and avatar hash, as well as session cookies used to keep you logged in for up to 12 hours. Using the dashboard is optional.</li>"
+},
     {
         "number": 3,
         "name": "Purposes & Legal Basis",
@@ -27,7 +27,7 @@
     {
         "number": 5,
         "name": "Who Can Access Your Data",
-        "description": "<li>\n<strong>Hosting Provider:</strong> Data is stored with\n<a\nhref=\"https://novonode.com\"\nclass=\"text-blue-400 underline\"\ntarget=\"_blank\"\nrel=\"noreferrer\">Novonode</a\n>, which has technical access for server operations and security. See their\n<a\nhref=\"https://novonode.com/privacy\"\nclass=\"text-blue-400 underline\"\ntarget=\"_blank\"\nrel=\"noreferrer\">Privacy Policy</a\n>.\n</li>",
+        "description": "<li><strong>Hosting Provider:</strong> Data is stored with <a href=\"https://novonode.com\" class=\"text-blue-400 underline\" target=\"_blank\" rel=\"noreferrer\">Novonode</a>, which has technical access for server operations and security. See their <a href=\"https://novonode.com/privacy\" class=\"text-blue-400 underline\" target=\"_blank\" rel=\"noreferrer\">Privacy Policy</a>.</li><li><strong>Discord:</strong> If you log in using Discord OAuth, your interaction is also subject to Discord’s own <a href=\"https://discord.com/privacy\" class=\"text-blue-400 underline\" target=\"_blank\" rel=\"noreferrer\">Privacy Policy</a>.</li>",
         "extraTag": "li",
         "extra": "<strong>No other third parties</strong> have access to your data. We do not sell, rent, or share it externally."
     },
@@ -56,6 +56,6 @@
     {
         "number": 10,
         "name": "Governing Law",
-        "description": "We follow GDPR for EU users and CCPA for California Residents. This policy is governed under the law of Canada (Novonode's jurisdiction) and other relevant regions."
+        "description": "For users in the EU/EEA, we process personal data in line with GDPR. For California residents, we consider CCPA where applicable. Except where local law requires otherwise, this policy is governed by the laws of the jurisdiction where the site operator is based."
     }
 ]
