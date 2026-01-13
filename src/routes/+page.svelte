@@ -165,7 +165,7 @@
       </div>
     </section>
 
-    <!-- Favorite Projects (same structure as your original, recolored) -->
+
     <section class="px-4 md:px-8 pb-10">
       <div class="mx-auto max-w-6xl space-y-3">
         <div class="flex items-end justify-between gap-4">
@@ -211,7 +211,6 @@
       </div>
     </section>
 
-    <!-- All Projects -->
     <section class="px-4 md:px-8 pb-10">
       <div class="mx-auto max-w-6xl space-y-3">
         <div class="flex items-end justify-between gap-4">
@@ -258,7 +257,6 @@
       </div>
     </section>
 
-    <!-- Content + Commissions side by side (from the earlier layout) -->
     <section class="px-4 md:px-8 pb-14">
       <div
         class="mx-auto max-w-6xl grid gap-10 md:grid-cols-2 border-t border-neutral-900 pt-10"
