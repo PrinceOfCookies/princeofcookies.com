@@ -160,14 +160,14 @@
       <h2 class="text-2xl mb-4">🤖 Github Info</h2>
       <div class="flex flex-col md:flex-row gap-4 mb-10">
         <img
-          src="https://github-readme-stats.vercel.app/api?username=PrinceOfCookies&show_icons=true&layout=compact&theme=dark&card_width=200px&hide=issues&stars&line_height=24px&ring_color=045dda&icon_color=0c5482&text_color=37656b&title_color=045ddb"
+          src="https://github-readme-stats-drab-two-38.vercel.app/api?username=PrinceOfCookies&show_icons=true&layout=compact&theme=dark&card_width=200px&hide=issues&stars&line_height=24px&ring_color=045dda&icon_color=0c5482&text_color=37656b&title_color=045ddb"
           alt="GitHub stats"
           width="400"
           height="200"
           class="rounded"
         />
         <img
-          src="https://github-readme-stats.vercel.app/api/top-langs/?username=PrinceOfCookies&layout=compact&theme=dark&title_color=045ddb"
+          src="https://github-readme-stats-drab-two-38.vercel.app/api/top-langs/?username=PrinceOfCookies&layout=compact&theme=dark&title_color=045ddb"
           alt="Top Languages"
           width="280"
           height="150"
