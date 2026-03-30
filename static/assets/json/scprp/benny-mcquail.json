@@ -1,0 +1,15 @@
+{
+  "name": "Benny McQuail",
+  "designation": "PERSONNEL DOSSIER",
+  "status": "ACTIVE",
+  "risk": "LOW",
+  "identity": {
+    "class": "Senior Engineer",
+    "id": "UNKNOWN"
+  },
+  "overview": [],
+  "privateNotes": [],
+  "publicEye": [],
+  "contradictions": [],
+  "quotes": [ ]
+}

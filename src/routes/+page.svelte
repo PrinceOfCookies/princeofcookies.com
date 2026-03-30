@@ -5,6 +5,7 @@
 
   // Internal
   import Project from "$lib/components/project.svelte";
+  import GitHubStats from "$lib/components/github-stats.svelte";
 
   // User Session
   export let user;
@@ -115,19 +116,19 @@
           </div>
 
           <p class="text-sm md:text-base leading-relaxed text-neutral-300 max-w-xl">
-            I am an <span class="font-medium">18-year-old</span> developer who codes
+            I am an <span class="font-bold">19 year old</span> developer who codes
             because it’s what I end up doing whether I plan to or not. I run games,
             break things, fix them, and keep going. I play a lot of
-            <span class="font-medium"> Garry's Mod</span>,
-            <span class="font-medium"> TF2</span>, and
-            <span class="font-medium"> Minecraft</span>, and most of what I make
+            <span class="font-bold"> Garry's Mod</span>,
+            <span class="font-bold"> TF2</span>, and
+            <span class="font-bold"> Minecraft</span>, and most of what I make
             comes from wanting those experiences to run the way I think they should.
           </p>
 
           <p class="text-sm md:text-base leading-relaxed text-neutral-400 max-w-xl">
             I work in
             <span class="text-pink-400 font-medium"> Lua</span> and
-            <span class="text-amber-300 font-medium"> JavaScript</span>. However I do know a little bit of <spam class=text-green-700 font-medium> C#</spam>, and <spam class="text-orange-500"> Rust</spam> and I use them in some of my projects!
+            <span class="text-amber-300 font-medium"> JavaScript</span>. However I do know a little bit of <span class="text-green-700 font-medium"> C#</span>, and <span class="text-orange-500"> Rust</span> and I use them in some of my projects!
           </p>
         </div>
 
@@ -143,29 +144,12 @@
             </span>
           </div>
 
-          <div class="flex flex-col gap-3">
-            <img
-              src="https://github-readme-stats-drab-two-38.vercel.app/api?username=PrinceOfCookies&show_icons=true&layout=compact&theme=dark&card_width=200px&hide=issues&stars&line_height=24px&ring_color=045dda&icon_color=0c5482&text_color=37656b&title_color=045ddb"
-              alt="GitHub stats"
-              width="400"
-              height="200"
-              class="rounded"
-              loading="lazy"
-            />
-            <img
-              src="https://github-readme-stats-drab-two-38.vercel.app/api/top-langs/?username=PrinceOfCookies&layout=compact&theme=dark&title_color=045ddb"
-              alt="Top Languages"
-              width="400"
-              height="150"
-              class="rounded"
-              loading="lazy"
-            />
-          </div>
+          <GitHubStats />
         </div>
       </div>
     </section>
 
-    <!-- Favorite Projects (same structure as your original, recolored) -->
+
     <section class="px-4 md:px-8 pb-10">
       <div class="mx-auto max-w-6xl space-y-3">
         <div class="flex items-end justify-between gap-4">
@@ -211,7 +195,6 @@
       </div>
     </section>
 
-    <!-- All Projects -->
     <section class="px-4 md:px-8 pb-10">
       <div class="mx-auto max-w-6xl space-y-3">
         <div class="flex items-end justify-between gap-4">
@@ -258,7 +241,6 @@
       </div>
     </section>
 
-    <!-- Content + Commissions side by side (from the earlier layout) -->
     <section class="px-4 md:px-8 pb-14">
       <div
         class="mx-auto max-w-6xl grid gap-10 md:grid-cols-2 border-t border-neutral-900 pt-10"
