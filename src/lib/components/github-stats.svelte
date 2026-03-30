@@ -1,8 +1,5 @@
 <script>
-  import { onMount } from 'svelte';
-
-  let stats = null;
-  let loading = true;
+  export let stats = null;
 
   const langColors = {
     JavaScript: '#f7df1e',
@@ -32,27 +29,9 @@
     if (n >= 1000) return (n / 1000).toFixed(1) + 'k';
     return String(n);
   }
-
-  onMount(async () => {
-    try {
-      const res = await fetch('/api/v1/github/stats');
-      if (res.ok) stats = await res.json();
-    } finally {
-      loading = false;
-    }
-  });
 </script>
 
-{#if loading}
-  <div class="animate-pulse space-y-2">
-    <div class="grid grid-cols-2 gap-2">
-      {#each [0, 1, 2, 3] as _}
-        <div class="h-14 rounded-lg bg-neutral-800/50"></div>
-      {/each}
-    </div>
-    <div class="h-16 rounded-lg bg-neutral-800/50"></div>
-  </div>
-{:else if stats && !stats.error}
+{#if stats && !stats.error}
   <!-- Stat tiles -->
   <div class="grid grid-cols-2 gap-2">
     {#each [['Repos', stats.repos], ['Stars', stats.stars], ['Followers', stats.followers], ['Following', stats.following]] as [label, val]}
