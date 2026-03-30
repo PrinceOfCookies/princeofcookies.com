@@ -7,8 +7,10 @@
   import Project from "$lib/components/project.svelte";
   import GitHubStats from "$lib/components/github-stats.svelte";
 
-  // User Session
-  export let user;
+  // Page data (user session + github stats)
+  export let data;
+  $: user = data?.user;
+  $: githubStats = data?.githubStats;
   async function logout() {
     await fetch("/api/v1/user/logout", {
       method: "POST",
@@ -144,7 +146,7 @@
             </span>
           </div>
 
-          <GitHubStats />
+          <GitHubStats stats={githubStats} />
         </div>
       </div>
     </section>
