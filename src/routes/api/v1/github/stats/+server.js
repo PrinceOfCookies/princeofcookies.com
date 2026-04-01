@@ -4,6 +4,7 @@ import { env } from '$env/dynamic/private';
 const USERNAME = 'PrinceOfCookies';
 const CACHE_TTL = 60 * 60 * 1000; // 1 hour
 
+let cache = null;
 let cacheTime = 0;
 
 function buildHeaders() {

@@ -19,7 +19,7 @@
 
 <main class="max-w-3xl mx-auto p-8 text-left bg-[#020308] text-neutral-200">
   <h1 class="text-3xl font-semibold mb-6 text-neutral-100 tracking-tight">
-    Privacy Policy for princeofcookies.tech
+    Privacy Policy for princeofcookies.com
   </h1>
 
   {#if effectiveDate}
