@@ -9,13 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to VPS
-        uses: appleboy/ssh-action@v1
+        uses:  D3rHase/ssh-command-action@v0.3.1
         with:
           host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          script: |
+          user: ${{ secrets.SSH_USER }}
+          private_key: ${{ secrets.SSH_KEY }}
+          command: |
             cd ${{ secrets.FOLDER }}
             git pull
             npm run build
             pm2 restart ${{ secrets.PM2_PROCESS_NAME }}
+          
