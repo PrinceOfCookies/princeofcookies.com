@@ -9,14 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to VPS
-        uses:  D3rHase/ssh-command-action@v0.3.1
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          user: ${{ secrets.SSH_USER }}
-          private_key: ${{ secrets.SSH_KEY }}
-          command: |
-            cd ${{ secrets.FOLDER }}
-            git pull
-            npm run build
-            pm2 restart ${{ secrets.PM2_PROCESS_NAME }}
-          
+        env:
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          FOLDER: ${{ secrets.FOLDER }}
+          PM2_NAME: ${{ secrets.PM2_PROCESS_NAME }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST "set -e; cd $FOLDER; git pull; npm run build; pm2 restart $PM2_NAME"
