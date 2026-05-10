@@ -1,5 +1,5 @@
 <script>
-  import favicon from "$lib/assets/favicon.png";
+  import favicon from "$lib/assets/faviconNEW.png";
   import Footer from "$lib/components/footer.svelte";
 
   let { children } = $props();
