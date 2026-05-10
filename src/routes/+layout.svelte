@@ -12,7 +12,7 @@
     name="description"
     content="PrinceOfCookies - Developer & content creator working with mainly Lua and JavaScript"
   />
-  <link rel="icon" type="image/png" sizes="32x32" href={favicon} />
+  <link rel="icon" type="image/png" sizes="32x32" href={`${favicon}?v=2`} />
   <!-- <link
     rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Geist&family=Geist+Mono&display=swap"
