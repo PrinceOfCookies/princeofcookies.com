@@ -1,61 +1,67 @@
 [
-    {
-        "effectiveDate": "April 17th, 2026"
-    },
-    {
-        "number": 1,
-        "name": "About Us",
-        "description": "princeofcookies.com (“we”, “our”) is a personal portfolio site and dashboard operated by an individual developer. We respect your privacy. This policy explains what data we collect, why, how we use it, who can access it, and your rights under applicable laws."
-    },
-{
-  "number": 2,
-  "name": "What Data We Collect & How",
-  "description": "<li><strong>Automatically Collected:</strong> IP address, user agent, page route, referrer (if present), HTTP method, and time of access.</li><li><strong>Host collection:</strong> Data collected by our hosting provider,\n includes, but is not limited to, IP Address, user agent, and time of\n access. To read more on what they collect, read their\n <a href=\"https://novonode.com/privacy\" class=\"text-blue-400 underline\" target=\"_blank\" rel=\"noreferrer\">Privacy Policy</a>.\n </li>\n<li><strong>Authentication Cookies / Account Data:</strong> When you log in with Discord OAuth, we receive and may store your Discord user ID, username, and avatar hash, as well as session cookies used to keep you logged in for up to 12 hours. Using the dashboard is optional.</li>"
-},
-    {
-        "number": 3,
-        "name": "Purposes & Legal Basis",
-        "description": "<li>\n      <strong>Security:</strong> Detect abuse, ensure service integrity\n    </li>\n    <li>\n      <strong>General Analytics:</strong> Most visited pages, user interactions,\n      etc.\n    </li>\n    <li>\n      <strong>Operations:</strong> Run backend services and log usage\n    </li>",
-        "extraTag": "mb-4",
-        "extra": "Under GDPR, processing is based on legitimate interests necessary for the functioning and security of the service. Under CCPA: usage is limited to service analytics."
-    },
-    {
-        "number": 4,
-        "name": "Data Retention",
-        "description": "Data is retained as long as necessary for security, operations, or legal compliance, and may be deleted upon valid request as permitted by law."
-    },
-    {
-        "number": 5,
-        "name": "Who Can Access Your Data",
-        "description": "<li><strong>Hosting Provider:</strong> Data is stored with <a href=\"https://novonode.com\" class=\"text-blue-400 underline\" target=\"_blank\" rel=\"noreferrer\">Novonode</a>, which has technical access for server operations and security. See their <a href=\"https://novonode.com/privacy\" class=\"text-blue-400 underline\" target=\"_blank\" rel=\"noreferrer\">Privacy Policy</a>.</li><li><strong>Discord:</strong> If you log in using Discord OAuth, your interaction is also subject to Discord’s own <a href=\"https://discord.com/privacy\" class=\"text-blue-400 underline\" target=\"_blank\" rel=\"noreferrer\">Privacy Policy</a>.</li>",
-        "extraTag": "li",
-        "extra": "<strong>No other third parties</strong> have access to your data. We do not sell, rent, or share it externally."
-    },
-    {
-        "number": 6,
-        "name": "Children's Privacy",
-        "description": "This site is not intended for individuals under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us data, contact us immediately."
-    },
-    {
-        "number": 7,
-        "name": "Your Rights (GDPR / CCPA)",
-        "description": "For more information on your rights under\n<a href=\"https://gdpr.eu\" class=\"text-blue-400 underline\" target=\"_blank\" rel=\"noreferrer\">GDPR</a>\nor\n<a href=\"https://oag.ca.gov/privacy/ccpa\" class=\"text-blue-400 underline\" target=\"_blank\" rel=\"noreferrer\">CCPA</a>, visit the official sources.",
-        "extraTag": "mb-4",
-        "extra": "To exercise these rights, email <a href=\"mailto:prince@strw.club\" class=\"text-blue-400 underline\">prince@strw.club</a> with enough information to verify your identity."
-    },
-    {
-        "number": 8,
-        "name": "Changes to This Policy",
-        "description": "This Privacy Policy may be updated periodically. Each update will have a new effective date. Continued use of this site means you agree to the updated terms."
-    },
-    {
-        "number": 9,
-        "name": "Contact & Dispute Resolution",
-        "description": "For questions, requests, or complaints, contact us at <a href=\"mailto:prince@strw.club\" class = \"text-blue-400 underline\"> prince@strw.club</a>. If unresolved, you may contact your data protection authority (e.g., EU DPA, CCPA authority)."
-    },
-    {
-        "number": 10,
-        "name": "Governing Law",
-        "description": "For users in the EU/EEA, we process personal data in line with GDPR. For California residents, we consider CCPA where applicable. Except where local law requires otherwise, this policy is governed by the laws of the jurisdiction where the site operator is based."
-    }
+  {
+    "effectiveDate": "May 10th, 2026"
+  },
+  {
+    "number": 1,
+    "name": "About This Site",
+    "description": "princeofcookies.com is a personal portfolio website and optional dashboard operated by an individual developer. This Privacy Policy explains what information may be collected, how it is used, how long it may be kept, and how you can contact us about privacy-related requests."
+  },
+  {
+    "number": 2,
+    "name": "Information We Collect",
+    "description": "<li><strong>Basic server data:</strong> When you visit the site, the server may receive technical information such as your IP address, user agent, requested page, referrer, HTTP method, and time of access.</li><li><strong>Infrastructure providers:</strong> Services such as Cloudflare and our hosting provider may process technical information including IP address, user agent, request metadata, and access timestamps for security, caching, and delivery purposes.</li><li><strong>Hosting provider:</strong> Our hosting provider, Novonode, may process technical server data needed to provide hosting, security, and infrastructure services. You can read their <a href=\"https://novonode.com/privacy\" target=\"_blank\" rel=\"noreferrer\">Privacy Policy</a>.</li><li><strong>Discord login data:</strong> If you choose to log in with Discord OAuth, we may receive and store your Discord user ID, username, avatar hash, and session data needed to keep you logged in.</li><li><strong>Cookies and sessions:</strong> The dashboard may use authentication cookies or similar session storage to keep you signed in for up to 12 hours.</li>"
+  },
+  {
+    "number": 3,
+    "name": "How We Use Information",
+    "description": "<li><strong>Security:</strong> To detect abuse, prevent unauthorized access, and protect the site.</li><li><strong>Operations:</strong> To run backend services, maintain sessions, debug issues, and keep the site working.</li><li><strong>Basic analytics:</strong> To understand general usage patterns, such as visited pages or interaction trends.</li><li><strong>Account access:</strong> To provide optional dashboard features when you log in with Discord.</li>"
+  },
+  {
+    "number": 4,
+    "name": "Legal Basis",
+    "description": "Where privacy laws such as GDPR apply, we generally process information based on legitimate interests, including site security, service operation, abuse prevention, and optional account functionality. Where consent is required by law, we will rely on consent instead."
+  },
+  {
+    "number": 5,
+    "name": "Data Retention",
+    "description": "Information is kept only as long as reasonably needed for security, operations, debugging, account functionality, or legal compliance. Authentication sessions are intended to last up to 12 hours. Server logs and related technical records may be deleted or rotated over time."
+  },
+  {
+    "number": 6,
+    "name": "Who Can Access Information",
+    "description": "<li><strong>Site operator:</strong> The site operator may access information when needed for security, debugging, maintenance, or support.</li><li><strong>Hosting provider:</strong> Novonode may have technical access to server data as part of providing hosting and infrastructure services. See their <a href=\"https://novonode.com/privacy\" target=\"_blank\" rel=\"noreferrer\">Privacy Policy</a>.</li><li><strong>Cloudflare:</strong> Cloudflare may process requests and related technical metadata as part of providing CDN, caching, DNS, and security services.</li><li><strong>Discord:</strong> If you log in using Discord OAuth, your use of Discord is also covered by Discord’s <a href=\"https://discord.com/privacy\" target=\"_blank\" rel=\"noreferrer\">Privacy Policy</a>.</li>",
+    "extraTag": "li",
+    "extra": "<strong>No sale of personal information:</strong> We do not sell, rent, or intentionally share your personal information with advertisers."
+  },
+  {
+    "number": 7,
+    "name": "Children's Privacy",
+    "description": "This site is not intended for children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided information to this site, contact us so it can be reviewed and deleted where appropriate."
+  },
+  {
+    "number": 8,
+    "name": "Your Privacy Rights",
+    "description": "Depending on where you live, you may have rights to request access, correction, deletion, or a copy of personal information associated with you. California residents may also have rights under CCPA, including rights to know, delete, opt out of sale or sharing, and non-discrimination. GDPR may provide rights such as access, rectification, erasure, restriction, portability, and objection. <a href=\"https://oag.ca.gov/privacy/ccpa\" target=\"_blank\" rel=\"noreferrer\">CCPA source</a>."
+  },
+  {
+    "number": 9,
+    "name": "How to Make a Request",
+    "description": "To make a privacy request, email <a href=\"mailto:prince@strw.club\">prince@strw.club</a>. Please include enough information to identify your account or request. We may ask for additional information if needed to verify the request."
+  },
+  {
+    "number": 10,
+    "name": "Governing Law",
+    "description": "This Privacy Policy is intended to comply with applicable privacy laws where reasonably required, including GDPR and CCPA where applicable. Except where local law provides otherwise, this policy and any privacy-related disputes are governed by the laws of the jurisdiction in which the site operator resides."
+  },
+  {
+    "number": 11,
+    "name": "Changes to This Policy",
+    "description": "This Privacy Policy may be updated from time to time. When changes are made, the effective date will be updated accordingly. Continued use of the site after changes are posted means the updated policy applies."
+  },
+  {
+    "number": 12,
+    "name": "Contact",
+    "description": "For privacy questions, requests, or complaints, contact <a href=\"mailto:prince@strw.club\">prince@strw.club</a>."
+  }
 ]
