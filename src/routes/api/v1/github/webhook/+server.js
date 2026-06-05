@@ -108,8 +108,7 @@ function buildDiscordPayload(payload) {
 					icon_url: pusherAvatar,
 					url: payload.sender?.html_url
 				},
-				title: 'View Changes',
-				url: payload.compare,
+				title: 'Changes (A|M|R)',
 				color: DISCORD_EMBED_COLOR,
 				fields: [
 					{
