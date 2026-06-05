@@ -73,8 +73,13 @@ function verifyGithubSignature(body, signature) {
 export async function POST({ request }) {
 	const eventType = request.headers.get('x-github-event');
 	const signature = request.headers.get('x-hub-signature-256');
-	const body = await request.text();
-
+	const body = await request.text()
+	
+	console.log('[github/webhook] eventType:', eventType);
+	console.log('[github/webhook] hasSignature:', Boolean(signature));
+	console.log('[github/webhook] hasSecret:', Boolean(env.GITHUB_WEBHOOK_SECRET));
+	console.log('[github/webhook] secretLength:', env.GITHUB_WEBHOOK_SECRET?.length);
+	
 	if (!verifyGithubSignature(body, signature)) {
 		return json({ error: 'Invalid signature' }, { status: 401 });
 	}
