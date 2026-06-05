@@ -24,7 +24,8 @@
       "isPrivate": true,
       "tooltipContent": "Private repository",
       "language": "lua",
-      "desc": "Developing a hit system for a Garry's Mod server called <strong>Low Sodium</strong>. Join us on <a href=\"https://discord.com/invite/BTjYMp3FWe\" class=\"underline\">Discord</a>.",
+      "moreinfo": "/LowSodium",
+      "desc": "Developed a hit system for a Garry's Mod server called <strong>Low Sodium</strong>. Join us on <a href=\"https://discord.com/invite/BTjYMp3FWe\" class=\"underline\">Discord</a>.",
       "icons": ["mysql", "lua"]
     },
     {
