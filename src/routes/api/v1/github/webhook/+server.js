@@ -3,14 +3,13 @@ import { env } from '$env/dynamic/private';
 import crypto from 'node:crypto';
 
 const HIDDEN_MESSAGE = '*Commit message hidden*';
-
-const HIDDEN_PATTERNS = ['[hide]', '[private]', 'secret'];
+const HIDDEN_PATTERNS = ['[secret]', '[hide]', '[private]'];
 
 const DISCORD_EMBED_COLOR = 0x5865f2;
 const MAX_COMMIT_LINES = 10;
-const MAX_FILE_LINES = 12;
 
-function shouldHideMessage(message) {
+function shouldHideCommit(commit) {
+	const message = commit.message ?? '';
 	const lowerMessage = message.toLowerCase();
 
 	return HIDDEN_PATTERNS.some((pattern) =>
@@ -19,7 +18,7 @@ function shouldHideMessage(message) {
 }
 
 function getCommitMessage(commit) {
-	if (shouldHideMessage(commit.message)) {
+	if (shouldHideCommit(commit)) {
 		return HIDDEN_MESSAGE;
 	}
 
@@ -33,13 +32,33 @@ function formatCommit(commit) {
 	return `[\`${shortHash}\`](${commit.url}) ${message}`;
 }
 
+function getRepoName(payload) {
+	return payload.repository?.name ?? payload.repository?.full_name ?? 'Unknown Repository';
+}
+
 function getBranchName(ref) {
 	return ref.replace('refs/heads/', '');
+}
+
+function shouldSendBranch(branchName) {
+	return branchName.toLowerCase().includes('main');
+}
+
+function getPusherName(payload) {
+	return payload.pusher?.name ?? payload.sender?.login ?? 'Unknown User';
+}
+
+function getPusherAvatar(payload) {
+	return payload.sender?.avatar_url;
 }
 
 function getChanges(payload) {
 	return payload.commits.reduce(
 		(total, commit) => {
+			if (shouldHideCommit(commit)) {
+				return total;
+			}
+
 			total.added += commit.added?.length ?? 0;
 			total.modified += commit.modified?.length ?? 0;
 			total.removed += commit.removed?.length ?? 0;
@@ -60,38 +79,6 @@ function getChangesText(payload) {
 	return `+${changes.added} ~${changes.modified} -${changes.removed}`;
 }
 
-function getChangedFiles(payload) {
-	const files = new Set();
-
-	for (const commit of payload.commits) {
-		for (const file of commit.added ?? []) files.add(`+ ${file}`);
-		for (const file of commit.modified ?? []) files.add(`~ ${file}`);
-		for (const file of commit.removed ?? []) files.add(`- ${file}`);
-	}
-
-	return [...files];
-}
-
-function formatChangedFiles(payload) {
-	const files = getChangedFiles(payload);
-
-	if (files.length === 0) {
-		return '*No changed files listed*';
-	}
-
-	const visibleFiles = files.slice(0, MAX_FILE_LINES);
-	const remainingCount = files.length - visibleFiles.length;
-
-	return [
-		'```diff',
-		...visibleFiles,
-		remainingCount > 0 ? `... ${remainingCount} more file(s)` : null,
-		'```'
-	]
-		.filter(Boolean)
-		.join('\n');
-}
-
 function formatCommits(payload) {
 	const commits = payload.commits ?? [];
 	const visibleCommits = commits.slice(0, MAX_COMMIT_LINES);
@@ -107,49 +94,44 @@ function formatCommits(payload) {
 }
 
 function buildDiscordPayload(payload) {
-	const repoName = payload.repository.full_name;
+	const repoName = getRepoName(payload);
 	const branchName = getBranchName(payload.ref);
-	const pusherName = payload.pusher.name;
+	const pusherName = getPusherName(payload);
+	const pusherAvatar = getPusherAvatar(payload);
 	const commitCount = payload.commits?.length ?? 0;
-
-	const fields = [
-		{
-			name: 'Branch',
-			value: `\`${branchName}\``,
-			inline: true
-		},
-		{
-			name: 'Commits',
-			value: String(commitCount),
-			inline: true
-		},
-		{
-			name: 'Changes',
-			value: getChangesText(payload),
-			inline: true
-		},
-		{
-			name: 'Commit List',
-			value: formatCommits(payload)
-		}
-	];
-
-	const changedFiles = formatChangedFiles(payload);
-
-	if (changedFiles) {
-		fields.push({
-			name: 'Changed Files',
-			value: changedFiles
-		});
-	}
 
 	return {
 		embeds: [
 			{
-				title: `${pusherName} pushed to ${repoName}`,
+				author: {
+					name: `${pusherName} pushed to ${repoName}`,
+					icon_url: pusherAvatar,
+					url: payload.sender?.html_url
+				},
+				title: 'View Changes',
 				url: payload.compare,
 				color: DISCORD_EMBED_COLOR,
-				fields,
+				fields: [
+					{
+						name: 'Branch',
+						value: `\`${branchName}\``,
+						inline: true
+					},
+					{
+						name: 'Commits',
+						value: String(commitCount),
+						inline: true
+					},
+					{
+						name: 'Changes',
+						value: getChangesText(payload),
+						inline: true
+					},
+					{
+						name: 'Commit List',
+						value: formatCommits(payload)
+					}
+				],
 				timestamp: new Date().toISOString(),
 				footer: {
 					text: 'GitHub Push Event'
@@ -182,13 +164,8 @@ function verifyGithubSignature(body, signature) {
 export async function POST({ request }) {
 	const eventType = request.headers.get('x-github-event');
 	const signature = request.headers.get('x-hub-signature-256');
-	const body = await request.text()
-	
-	console.log('[github/webhook] eventType:', eventType);
-	console.log('[github/webhook] hasSignature:', Boolean(signature));
-	console.log('[github/webhook] hasSecret:', Boolean(env.GITHUB_WEBHOOK_SECRET));
-	console.log('[github/webhook] secretLength:', env.GITHUB_WEBHOOK_SECRET?.length);
-	
+	const body = await request.text();
+
 	if (!verifyGithubSignature(body, signature)) {
 		return json({ error: 'Invalid signature' }, { status: 401 });
 	}
@@ -205,6 +182,16 @@ export async function POST({ request }) {
 
 	try {
 		const payload = JSON.parse(body);
+		const branchName = getBranchName(payload.ref);
+
+		if (!shouldSendBranch(branchName)) {
+			return json({
+				ok: true,
+				ignored: true,
+				reason: 'Branch does not include main'
+			});
+		}
+
 		const discordPayload = buildDiscordPayload(payload);
 
 		const discordRes = await fetch(env.DISCORD_GITHUB_WEBHOOK_URL, {
