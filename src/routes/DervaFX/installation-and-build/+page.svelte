@@ -36,7 +36,7 @@
   </section>
 
   <section class="mt-5 border-t border-neutral-900 pt-5">
-    <h3 class="text-lg font-semibold text-neutral-100">Run the Demo</h3>
+    <h3 class="text-lg font-semibold text-neutral-100">Run the Demo Menu</h3>
     <pre
       class="mt-3 overflow-x-auto rounded-lg border border-neutral-800 bg-neutral-950/80 px-4 py-3 text-sm text-neutral-200"><code
         >mvn javafx:run</code
@@ -50,7 +50,7 @@
         >&lt;dependency&gt;
   &lt;groupId&gt;com.princeofcookies&lt;/groupId&gt;
   &lt;artifactId&gt;dervafx-pub&lt;/artifactId&gt;
-  &lt;version&gt;0.0.4-SNAPSHOT&lt;/version&gt;
+  &lt;version&gt;0.0.5-SNAPSHOT&lt;/version&gt;
 &lt;/dependency&gt;</code
       ></pre>
   </section>

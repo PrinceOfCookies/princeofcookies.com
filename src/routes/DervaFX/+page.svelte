@@ -62,7 +62,7 @@
         class="block h-auto w-full bg-neutral-950"
       />
       <figcaption class="border-t border-neutral-800 px-4 py-3 text-sm text-neutral-400">
-        Current input and grid demo
+        Demo app menu launches separate showcases for each DervaFX surface
       </figcaption>
     </figure>
 

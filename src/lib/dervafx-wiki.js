@@ -6,6 +6,7 @@ export const projectFocus = [
   "Basic grid layout",
   "Floating windows",
   "Scene theme application",
+  "Per-component demo launcher",
 ];
 
 export const commonHelpers = [
