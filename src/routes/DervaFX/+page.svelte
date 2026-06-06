@@ -49,7 +49,7 @@
         <dt class="text-neutral-500">Artifact</dt>
         <dd class="text-neutral-200"><code>dervafx-pub</code></dd>
         <dt class="text-neutral-500">Version</dt>
-        <dd class="text-neutral-200"><code>0.0.2-SNAPSHOT</code></dd>
+        <dd class="text-neutral-200"><code>0.0.4-SNAPSHOT</code></dd>
       </dl>
     </aside>
   </section>
@@ -57,12 +57,12 @@
   <section class="grid gap-4 px-5 py-5 md:px-6 md:grid-cols-2">
     <figure class="overflow-hidden rounded-lg border border-neutral-800 bg-neutral-950/70">
       <img
-        src="https://raw.githubusercontent.com/PrinceOfCookies/DervaFX-Public/master/assets/QuickStart.png"
-        alt="DervaFX quick start demo"
+        src="https://raw.githubusercontent.com/PrinceOfCookies/DervaFX-Public/master/assets/Demo.png"
+        alt="DervaFX demo window with grid-based inputs"
         class="block h-auto w-full bg-neutral-950"
       />
       <figcaption class="border-t border-neutral-800 px-4 py-3 text-sm text-neutral-400">
-        Current demo window
+        Current input and grid demo
       </figcaption>
     </figure>
 

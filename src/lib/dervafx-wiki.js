@@ -2,7 +2,8 @@ export const requirements = ["Java 21 or newer", "Maven 3.9 or newer recommended
 
 export const projectFocus = [
   "Basic containers",
-  "Basic controls",
+  "Basic controls and inputs",
+  "Basic grid layout",
   "Floating windows",
   "Scene theme application",
 ];
@@ -46,6 +47,7 @@ export const currentGoals = [
 export const minimalApp = `package com.example;
 
 import com.princeofcookies.dervafx.DervaFX;
+import com.princeofcookies.dervafx.DervaGrid;
 import com.princeofcookies.dervafx.DervaRoot;
 import com.princeofcookies.dervafx.DervaWindow;
 
@@ -70,12 +72,15 @@ public final class ExampleApp extends Application {
             .position(24, 24)
             .size(320, 200);
 
-        window.add(
-            DervaFX.vbox()
-                .spacing(8)
-                .add(DervaFX.label("Hello from DervaFX"))
-                .add(DervaFX.button("Test"))
-        );
+        DervaGrid grid = DervaFX.grid()
+            .hgap(8)
+            .vgap(8)
+            .add(DervaFX.label("Project"), 0, 0)
+            .add(DervaFX.textField().prompt("Project name"), 1, 0)
+            .add(DervaFX.checkBox("Remember layout"), 0, 1, 2, 1)
+            .add(DervaFX.button("Test"), 1, 2);
+
+        window.add(grid);
 
         root.add(window);
 
@@ -94,10 +99,13 @@ DervaWindow window = DervaFX.window("Base Window")
     .size(360, 220);
 
 window.add(
-    DervaFX.vbox()
-        .spacing(8)
-        .add(DervaFX.label("DervaFX demo"))
-        .add(DervaFX.button("Click me"))
+    DervaFX.grid()
+        .hgap(8)
+        .vgap(8)
+        .add(DervaFX.label("Project"), 0, 0)
+        .add(DervaFX.textField().prompt("Project name"), 1, 0)
+        .add(DervaFX.checkBox("Remember layout"), 0, 1, 2, 1)
+        .add(DervaFX.button("Click me"), 1, 2)
 );
 
 root.add(window);`;

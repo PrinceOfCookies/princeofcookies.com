@@ -53,6 +53,29 @@ const docOverrides = {
     kind: "Layout",
     summary: "Horizontal layout wrapper backed by HBox.",
   },
+  DervaGrid: {
+    kind: "Layout",
+    summary: "Grid layout wrapper backed by GridPane.",
+    description:
+      "DervaGrid is the thin GridPane-based layout wrapper for two-column settings panels, form-like rows, and other structured layouts.",
+    notes: [
+      "Use DervaFX.grid() for practical row and column placement without leaving the wrapper API.",
+      "DervaGrid is meant to stay small and JavaFX-native rather than becoming a custom layout framework.",
+    ],
+    methods: [
+      "add(DervaElement<?> child, int column, int row) : DervaGrid",
+      "add(DervaElement<?> child, int column, int row, int columnSpan, int rowSpan) : DervaGrid",
+      "remove(DervaElement<?> child) : DervaGrid",
+      "clear() : DervaGrid",
+      "hgap(double value) : DervaGrid",
+      "vgap(double value) : DervaGrid",
+      "debugGrid(boolean value) : DervaGrid",
+      "spacing(double value) : DervaGrid",
+      "padding(Insets padding) : DervaGrid",
+      "padding(double value) : DervaGrid",
+      "alignment(Pos alignment) : DervaGrid",
+    ],
+  },
   DervaWindow: {
     kind: "Window",
     summary: "Floating window wrapper with title bar, close button, and drag support.",
@@ -113,7 +136,7 @@ function inferKind(name) {
   if (name.endsWith("Theme") || name.endsWith("ThemeManager")) return "Theme";
   if (name.endsWith("Window")) return "Window";
   if (name.endsWith("Panel") || name.endsWith("Root")) return "Container";
-  if (name.endsWith("VBox") || name.endsWith("HBox")) return "Layout";
+  if (name.endsWith("VBox") || name.endsWith("HBox") || name.endsWith("Grid")) return "Layout";
   return "Control";
 }
 
@@ -263,7 +286,7 @@ async function buildComponentDocs() {
         kind,
         summary: inferSummary(className, kind),
         description: inferDescription(className, kind),
-        methods,
+        methods: docOverrides[className]?.methods ?? methods,
         inheritedHelpers:
           className !== "DervaElement" && extendsName?.startsWith("DervaElement")
             ? commonHelpers
@@ -273,6 +296,21 @@ async function buildComponentDocs() {
       };
     })
     .filter(Boolean);
+
+  if (!docs.some((doc) => doc.className === "DervaGrid")) {
+    docs.push({
+      slug: toSlug("DervaGrid"),
+      title: "DervaGrid",
+      className: "DervaGrid",
+      kind: "Layout",
+      summary: inferSummary("DervaGrid", "Layout"),
+      description: inferDescription("DervaGrid", "Layout"),
+      methods: docOverrides.DervaGrid.methods,
+      inheritedHelpers: commonHelpers,
+      notes: docOverrides.DervaGrid.notes,
+      sourcePath: "src/main/java/com/princeofcookies/dervafx/DervaGrid.java",
+    });
+  }
 
   const componentDocsBySlug = Object.fromEntries(docs.map((doc) => [doc.slug, doc]));
   const componentGroups = buildGroups(componentDocsBySlug);
