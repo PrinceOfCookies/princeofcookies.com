@@ -20,4 +20,4 @@ jobs:
           echo "$SSH_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts
-          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST "set -e; cd $FOLDER; git pull; npm run build; pm2 restart $PM2_NAME"
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST "set -e; cd $FOLDER; git pull; npm ci; npm run build; pm2 restart $PM2_NAME"
