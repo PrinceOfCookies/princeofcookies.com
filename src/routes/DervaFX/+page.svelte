@@ -49,7 +49,7 @@
         <dt class="text-neutral-500">Artifact</dt>
         <dd class="text-neutral-200"><code>dervafx-pub</code></dd>
         <dt class="text-neutral-500">Version</dt>
-        <dd class="text-neutral-200"><code>0.0.4-SNAPSHOT</code></dd>
+        <dd class="text-neutral-200"><code>0.0.6-SNAPSHOT</code></dd>
       </dl>
     </aside>
   </section>
@@ -62,7 +62,7 @@
         class="block h-auto w-full bg-neutral-950"
       />
       <figcaption class="border-t border-neutral-800 px-4 py-3 text-sm text-neutral-400">
-        Demo app menu launches separate showcases for each DervaFX surface
+        Demo menu now includes Derma-theme, dock, and property-sheet showcases
       </figcaption>
     </figure>
 

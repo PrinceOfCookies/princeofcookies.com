@@ -3,9 +3,10 @@ export const requirements = ["Java 21 or newer", "Maven 3.9 or newer recommended
 export const projectFocus = [
   "Basic containers",
   "Basic controls and inputs",
-  "Basic grid layout",
+  "Basic grid and dock layout",
   "Floating windows",
   "Scene theme application",
+  "Derma-style wrapper direction",
   "Per-component demo launcher",
 ];
 
@@ -50,6 +51,7 @@ export const minimalApp = `package com.example;
 import com.princeofcookies.dervafx.DervaFX;
 import com.princeofcookies.dervafx.DervaGrid;
 import com.princeofcookies.dervafx.DervaRoot;
+import com.princeofcookies.dervafx.DervaTheme;
 import com.princeofcookies.dervafx.DervaWindow;
 
 import javafx.application.Application;
@@ -68,6 +70,8 @@ public final class ExampleApp extends Application {
         AnchorPane.setRightAnchor(root.getNode(), 0.0);
         AnchorPane.setBottomAnchor(root.getNode(), 0.0);
         AnchorPane.setLeftAnchor(root.getNode(), 0.0);
+
+        DervaFX.setTheme(DervaTheme.derma());
 
         DervaWindow window = DervaFX.window("Example")
             .position(24, 24)
@@ -94,6 +98,8 @@ public final class ExampleApp extends Application {
 }`;
 
 export const exampleSnippet = `DervaRoot root = DervaFX.root();
+
+DervaFX.setTheme(DervaTheme.derma());
 
 DervaWindow window = DervaFX.window("Base Window")
     .position(24, 24)

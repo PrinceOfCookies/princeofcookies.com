@@ -76,6 +76,36 @@ const docOverrides = {
       "alignment(Pos alignment) : DervaGrid",
     ],
   },
+  DervaDock: {
+    kind: "Layout",
+    summary: "Dock layout wrapper with Derma-style child docking.",
+    description:
+      "DervaDock is a Pane-based layout wrapper that positions children using Derma-style docking such as top, left, right, bottom, and fill.",
+    notes: [
+      "Use child methods like dockTop(), dockFill(), and dockMargin(...) before adding elements to the dock.",
+      "This is the main wrapper surface for a more VGUI-like layout style.",
+    ],
+  },
+  DervaPropertySheet: {
+    kind: "Layout",
+    summary: "Tabbed property-sheet wrapper backed by TabPane.",
+    description:
+      "DervaPropertySheet provides a simple tabbed content surface that leans toward the classic Derma property-sheet feel.",
+    notes: [
+      "Use addPage(...) to attach wrapped content as separate tabs.",
+      "The Derma stylesheet gives this a more tool-like tab look than the default dark theme.",
+    ],
+  },
+  DervaScrollPanel: {
+    kind: "Layout",
+    summary: "Scrollable vertical content wrapper backed by ScrollPane.",
+    description:
+      "DervaScrollPanel provides a Derma-style scrollable container for stacked content such as inspector sections, long settings lists, and category groups.",
+    notes: [
+      "Use add(...) to append wrapped content into the internal vertical stack.",
+      "This is one of the main missing Derma/VGUI primitives for real tool UIs.",
+    ],
+  },
   DervaWindow: {
     kind: "Window",
     summary: "Floating window wrapper with title bar, close button, and drag support.",
@@ -113,6 +143,7 @@ const docOverrides = {
     summary: "Theme descriptor for stylesheet-based scene theming.",
     notes: [
       "The current built-in stylesheet is /com/princeofcookies/dervafx/dervafx-dark.css.",
+      "DervaTheme.derma() exposes the Derma-oriented stylesheet /com/princeofcookies/dervafx/dervafx-derma.css.",
       "If the configured stylesheet resource cannot be found, DervaFX throws an IllegalStateException.",
     ],
   },
