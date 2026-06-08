@@ -1,6 +1,4 @@
 <script>
-  import { faLock, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-  import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
   import Tooltip from "$lib/components/tooltip.svelte";
   import { goto } from "$app/navigation";
 
@@ -19,16 +17,6 @@
     default: "text-gray-400",
   };
 
-  let showIcons = false;
-
-  if (typeof window !== "undefined") {
-    showIcons = !window.matchMedia("(max-width: 600px)").matches;
-
-    window.matchMedia("(max-width: 600px)").addEventListener("change", (e) => {
-      showIcons = !e.matches;
-    });
-  }
-
   $: colorClass = languageColors[language] || languageColors.default;
 
   export let name;
@@ -46,11 +34,19 @@
       <span class="relative group">
         <Tooltip content={tooltipContent}>
           <em class="text-sm text-neutral-400">
-            <FontAwesomeIcon
-              icon={faLock}
-              color="#9bb6ca"
-              style="font-size:1.25em;"
-            />
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              class="h-5 w-5 text-[#9bb6ca]"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="5" y="11" width="14" height="10" rx="2"></rect>
+              <path d="M8 11V8a4 4 0 1 1 8 0v3"></path>
+            </svg>
           </em>
         </Tooltip>
       </span>
@@ -60,18 +56,16 @@
     {/if}
   </td>
   <td class="p-3">
-    {#if showIcons}
-      <div class="grid grid-cols-2 gap-2 items-center">
-        {#if icons}
-          {#each icons as icon}
-            <img src={`/assets/icons/${icon}.svg`} alt={icon} class="w-6 h-6" />
-          {/each}
-        {/if}
-        <svg class="w-6 h-6" viewBox="0 0 24 24">
-          <use href="/assets/icons/static.svg#icon" />
-        </svg>
-      </div>
-    {/if}
+    <div class="hidden min-[601px]:grid grid-cols-2 gap-2 items-center">
+      {#if icons}
+        {#each icons as icon}
+          <img src={`/assets/icons/${icon}.svg`} alt={icon} class="w-6 h-6" />
+        {/each}
+      {/if}
+      <svg class="w-6 h-6" viewBox="0 0 24 24">
+        <use href="/assets/icons/static.svg#icon" />
+      </svg>
+    </div>
   </td>
   <td class="p-3">
     {@html desc}
@@ -80,13 +74,22 @@
     {#if moreinfo}
       <button
         class="inline-flex items-center text-cyan-400 hover:text-cyan-200 transition-colors"
-        on:click={() => goto(moreinfo)}
+        onclick={() => goto(moreinfo)}
         aria-label="More info"
       >
-        <FontAwesomeIcon
-          icon={faArrowRight}
-          class="w-8 h-4 transition-transform duration-500 hover:scale-125 hover:rotate-[360deg]"
-        />
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          class="h-4 w-8 transition-transform duration-500 hover:scale-125 hover:rotate-[360deg]"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12h14"></path>
+          <path d="m13 6 6 6-6 6"></path>
+        </svg>
       </button>
     {/if}
   </td>
