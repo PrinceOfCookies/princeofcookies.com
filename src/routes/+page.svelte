@@ -1,68 +1,24 @@
 <script>
-  // External
-  import { onMount } from "svelte";
   import { PUBLIC_DISCORD_AUTH_URI } from "$env/static/public";
+  import { invalidateAll } from "$app/navigation";
 
-  // Internal
   import Project from "$lib/components/project.svelte";
   import GitHubStats from "$lib/components/github-stats.svelte";
 
-  // Page data (user session + github stats)
-  export let data;
-  $: user = data?.user;
-  $: githubStats = data?.githubStats;
+  let { data } = $props();
+
+  const heroTitle = "I'm PrinceOfCookies";
+
   async function logout() {
-    await fetch("/api/v1/user/logout", {
+    const response = await fetch("/api/v1/user/logout", {
       method: "POST",
       body: JSON.stringify({}),
     });
-  }
 
-  // Type anim
-  let typewriterText = "";
-  const text = "I'm PrinceOfCookies";
-  const speed = 75;
-
-  let favoriteProjects = [];
-  let projects = [];
-
-  let pc = false;
-
-  onMount(async () => {
-    // viewport check
-    const mq = window.matchMedia("(max-width: 600px)");
-    pc = !mq.matches;
-    const handler = (e) => {
-      pc = !e.matches;
-    };
-    mq.addEventListener("change", handler);
-
-    // load projects
-    const res = await fetch("/assets/json/proj.json");
-    const data = await res.json();
-
-    favoriteProjects = data.favoriteProjects ?? [];
-    projects = data.projects ?? [];
-
-    // typewriter
-    typewriterText = "";
-    let index = 0;
-    let timeoutId;
-
-    function type() {
-      if (index < text.length) {
-        typewriterText += text.charAt(index++);
-        timeoutId = setTimeout(type, speed);
-      }
+    if (response.ok) {
+      await invalidateAll();
     }
-
-    type();
-
-    return () => {
-      mq.removeEventListener("change", handler);
-      clearTimeout(timeoutId);
-    };
-  });
+  }
 </script>
 
 <main class="min-h-screen bg-[#020308] text-neutral-100 flex flex-col">
@@ -76,27 +32,24 @@
         <span>MY PORTFOLIO</span>
       </div>
 
-      {#if pc}
-        <div class="flex items-center gap-2">
-          {#if user}
+      <div class="hidden min-[601px]:flex items-center gap-2">
+          {#if data?.user}
             <button
               type="button"
               class="px-3 py-1.5 text-xs font-medium rounded-full border border-neutral-700 bg-neutral-900/80 hover:border-bg-gray-700hover:text-bg-gray-700 transition-colors"
-              on:click={logout}
+              onclick={logout}
             >
               Log out
             </button>
           {:else}
-            <button
-              type="button"
+            <a
+              href={PUBLIC_DISCORD_AUTH_URI}
               class="bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-bold py-2 px-4 rounded mr-2"
-              on:click={() => (window.location.href = PUBLIC_DISCORD_AUTH_URI)}
             >
               Login with Discord
-            </button>
+            </a>
           {/if}
-        </div>
-      {/if}
+      </div>
     </div>
   </header>
 
@@ -113,7 +66,7 @@
             <h1
               class="text-3xl md:text-4xl font-semibold text-neutral-100 whitespace-nowrap overflow-hidden border-r border-neutral-500 pr-1"
             >
-              {typewriterText}
+              {heroTitle}
             </h1>
           </div>
 
@@ -146,7 +99,7 @@
             </span>
           </div>
 
-          <GitHubStats stats={githubStats} />
+          <GitHubStats stats={data.githubStats} />
         </div>
       </div>
     </section>
@@ -179,7 +132,7 @@
                 </tr>
               </thead>
               <tbody class="divide-y divide-neutral-900/80">
-                {#each favoriteProjects as favproject}
+                {#each data.favoriteProjects as favproject}
                   <Project
                     name={favproject.name}
                     repoLink={favproject.repoLink}
@@ -224,7 +177,7 @@
                 </tr>
               </thead>
               <tbody class="divide-y divide-neutral-900/80">
-                {#each projects as project}
+                {#each data.projects as project}
                   <Project
                     name={project.name}
                     repoLink={project.repoLink}
