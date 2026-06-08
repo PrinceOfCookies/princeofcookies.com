@@ -26,13 +26,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Custom animation for blinking cursor */
 @keyframes blink {
   0%, 50% {
-    border-color: currentColor;
+    opacity: 1;
   }
   51%, 100% {
-    border-color: transparent;
+    opacity: 0;
   }
 }
 

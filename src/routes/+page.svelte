@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   import { PUBLIC_DISCORD_AUTH_URI } from "$env/static/public";
   import { invalidateAll } from "$app/navigation";
 
@@ -8,6 +9,23 @@
   let { data } = $props();
 
   const heroTitle = "I'm PrinceOfCookies";
+  let typewriterText = $state("");
+
+  onMount(() => {
+    let index = 0;
+    typewriterText = "";
+
+    const intervalId = window.setInterval(() => {
+      index += 1;
+      typewriterText = heroTitle.slice(0, index);
+
+      if (index >= heroTitle.length) {
+        window.clearInterval(intervalId);
+      }
+    }, 85);
+
+    return () => window.clearInterval(intervalId);
+  });
 
   async function logout() {
     const response = await fetch("/api/v1/user/logout", {
@@ -64,9 +82,15 @@
               PRINCEOFCOOKIES
             </span>
             <h1
-              class="text-3xl md:text-4xl font-semibold text-neutral-100 whitespace-nowrap overflow-hidden border-r border-neutral-500 pr-1"
+              class="relative inline-block text-3xl md:text-4xl font-semibold text-neutral-100"
             >
-              {heroTitle}
+              <span class="invisible whitespace-nowrap" aria-hidden="true">{heroTitle}</span>
+              <span class="absolute inset-0 whitespace-nowrap">
+                {typewriterText}<span
+                  class="inline-block h-[0.95em] w-px translate-y-[0.08em] bg-neutral-500 align-middle animate-blink"
+                  aria-hidden="true"
+                ></span>
+              </span>
             </h1>
           </div>
 
