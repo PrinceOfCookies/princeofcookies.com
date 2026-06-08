@@ -6,6 +6,7 @@ const CACHE_TTL = 60 * 60 * 1000; // 1 hour
 
 let cache = null;
 let cacheTime = 0;
+let pendingRequest = null;
 
 function buildHeaders() {
   const headers = {
@@ -69,9 +70,10 @@ export async function GET() {
   }
 
   try {
-    const stats = await fetchStats();
+    pendingRequest ??= fetchStats();
+    const stats = await pendingRequest;
     cache = stats;
-    cacheTime = now;
+    cacheTime = Date.now();
     return json(stats, { headers: { 'Cache-Control': 'public, max-age=3600' } });
   } catch (err) {
     console.error('[github/stats]', err);
@@ -80,5 +82,7 @@ export async function GET() {
       return json(cache, { headers: { 'Cache-Control': 'public, max-age=60' } });
     }
     return json({ error: 'Failed to fetch GitHub stats' }, { status: 502 });
+  } finally {
+    pendingRequest = null;
   }
 }
