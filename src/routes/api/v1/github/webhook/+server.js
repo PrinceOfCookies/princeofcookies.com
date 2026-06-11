@@ -41,7 +41,7 @@ function getBranchName(ref) {
 }
 
 function shouldSendBranch(branchName) {
-	return branchName.toLowerCase().includes('main');
+	return branchName.toLowerCase().includes('main') || branchName.toLowerCase().includes('test');
 }
 
 function getPusherName(payload) {
