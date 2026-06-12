@@ -41,7 +41,7 @@ function getBranchName(ref) {
 }
 
 function shouldSendBranch(branchName) {
-	return branchName.toLowerCase().includes('main') || branchName.toLowerCase().includes('test');
+	return branchName.trim().toLowerCase() !== 'master';
 }
 
 function getPusherName(payload) {
@@ -187,7 +187,7 @@ export async function POST({ request }) {
 			return json({
 				ok: true,
 				ignored: true,
-				reason: 'Branch does not include main'
+				reason: 'Master branch is ignored'
 			});
 		}
 
