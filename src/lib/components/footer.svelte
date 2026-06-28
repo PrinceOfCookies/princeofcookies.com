@@ -108,7 +108,7 @@
     </a>
     <span class="mx-2 text-neutral-700">•</span>
     <a
-      href="https://princeofcookies.com/scprp"
+      href="https://scp.princeofcookies.com/"
       target="_blank"
       rel="noreferrer"
       class="underline decoration-neutral-700 hover:decoration-orange-500 hover:text-neutral-300 transition-colors ml-1"

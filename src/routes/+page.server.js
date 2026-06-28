@@ -1,4 +1,5 @@
 import { fetchSession } from "$lib/server/sessionHandler";
+import { isScpHostname } from "$lib/scp-routing";
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
@@ -16,9 +17,20 @@ async function loadProjects() {
   return projectsCache;
 }
 
-export async function load({ cookies, fetch }) {
+export async function load({ cookies, fetch, url }) {
   const sessionID = cookies.get("session_id");
   const user = fetchSession(sessionID);
+  const isScpHost = isScpHostname(url.hostname);
+
+  if (isScpHost) {
+    return {
+      isScpHost,
+      user,
+      githubStats: null,
+      favoriteProjects: [],
+      projects: []
+    };
+  }
 
   let githubStats = null;
   try {
@@ -31,6 +43,7 @@ export async function load({ cookies, fetch }) {
   const projectData = await loadProjects();
 
   return {
+    isScpHost,
     user,
     githubStats,
     favoriteProjects: projectData.favoriteProjects ?? [],

@@ -5,6 +5,7 @@
 
   import Project from "$lib/components/project.svelte";
   import GitHubStats from "$lib/components/github-stats.svelte";
+  import ScpHome from "$lib/components/scprp-home.svelte";
 
   let { data } = $props();
 
@@ -12,6 +13,10 @@
   let typewriterText = $state("");
 
   onMount(() => {
+    if (data.isScpHost) {
+      return;
+    }
+
     let index = 0;
     typewriterText = "";
 
@@ -39,6 +44,11 @@
   }
 </script>
 
+{#if data.isScpHost}
+  <main class="min-h-screen bg-[#020308] text-neutral-100">
+    <ScpHome />
+  </main>
+{:else}
 <main class="min-h-screen bg-[#020308] text-neutral-100 flex flex-col">
   <!-- Top bar -->
   <header
@@ -264,3 +274,4 @@
     </section>
   </div>
 </main>
+{/if}

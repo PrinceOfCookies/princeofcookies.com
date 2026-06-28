@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
 
   export let jsonPath;
-  export let backHref = "/scprp";
+  export let backHref = "/";
 
   let character = null;
 
