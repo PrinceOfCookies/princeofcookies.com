@@ -1,15 +1,137 @@
 {
   "name": "Benny McQuail",
-  "designation": "PERSONNEL DOSSIER",
-  "status": "ACTIVE",
+  "designation": "SITE-65 PERSONNEL DOSSIER",
+  "status": "EXTENDED LEAVE",
   "risk": "LOW",
   "identity": {
-    "class": "Senior Engineer",
+    "class": "Former Senior Engineer",
+    "department": "E&TS",
+    "rank": "Technician Expert",
+    "clearance": "CL2, formerly authorized CL3 access",
+    "age": "24",
+    "background": "Former military engineer",
     "id": "UNKNOWN"
   },
-  "overview": [],
-  "privateNotes": [],
-  "publicEye": [],
-  "contradictions": [],
-  "quotes": [ ]
+  "overview": [
+    "Benny McQuail is a former military engineer who began his Foundation career as an IT Technician assigned to Site-65.",
+    "Known for technical competence, persistence, and a habit of solving administrative problems through excessive documentation.",
+    "Benny believes in the Foundation mission, but recent events have left him suspicious of what Site Administration and Foundation Command may be hiding."
+  ],
+  "careerTimeline": [
+    {
+      "title": "Assigned to Site-65",
+      "body": "Entered Foundation service as an IT Technician, primarily handling technical maintenance and site infrastructure work."
+    },
+    {
+      "title": "Ethics Chairman Workstation Repair",
+      "body": "Repaired Ethics Committee Chairman Terry Anderson's computer, resulting in an unofficial promotion to Senior Technician and a clearance increase from CL1 to CL2."
+    },
+    {
+      "title": "Recognized by Ava Fernsby",
+      "body": "Received further unofficial recognition from former Ethics Committee Assistant Ava Fernsby, strengthening Benny's connection to Ethics personnel."
+    },
+    {
+      "title": "Technician Expert Assignment",
+      "body": "Moved into the Technician Expert role, combining IT Technician duties with engineering responsibilities under a CL2 position."
+    },
+    {
+      "title": "Weapon Permit Dispute",
+      "body": "Submitted an extensive weapon permit request through Ethics and Site Administration. The request escalated through multiple advisors, ISD review, and eventually Foundation Command."
+    },
+    {
+      "title": "Senior Engineer Promotion",
+      "body": "After a promotion request was accepted, Benny became an unofficial Senior Engineer and was permitted to receive a CL3 keycard when printed by authorized personnel."
+    },
+    {
+      "title": "Permit Revocation and Reinstatement",
+      "body": "Dr. Gabriel Lambert revoked Benny's weapon permit without much warning. Site Advisor Yasutaka Hashimoto escalated the matter to Foundation Command, resulting in the permit being reinstated through an Overseers approval approval."
+    },
+    {
+      "title": "Meat Machine Incident",
+      "body": "Benny received photographic evidence of an alleged 'meat machine' on site. Site Administration and Foundation Command denied its existence and claimed the images were AI-generated."
+    },
+    {
+      "title": "Extended Leave",
+      "body": "Following the incident and several unexplained disappearances or deaths, Benny took an extended break from Site-65. His Senior Engineer status was later revoked due to inactivity."
+    }
+  ],
+  "associates": [
+    {
+      "name": "Terry Anderson",
+      "relation": "Former Ethics Committee Chairman",
+      "note": "Benny repaired his computer, which indirectly started Benny's rise through technical ranks."
+    },
+    {
+      "name": "Ava Fernsby",
+      "relation": "Former Ethics Committee Assistant",
+      "note": "Recognized Benny's work before later disappearing from his life without clear explanation."
+    },
+    {
+      "name": "Crow Bertly",
+      "relation": "Ethics Committee Assistant",
+      "note": "Frequently spoke with Benny "
+    },
+    {
+      "name": "Alex 'Sinner' Saint",
+      "relation": "Site Advisor",
+      "note": "Reviewed Benny's later permit work and had ISD check it for loopholes."
+    },
+    {
+      "name": "Archie Wright",
+      "relation": "Former Site Advisor",
+      "note": "Helped Benny during the permit process. Benny later learned Archie had hung himself in his office."
+    },
+    {
+      "name": "Yasutaka Hashimoto",
+      "relation": "Site Advisor",
+      "note": "Supported Benny's argument regarding the proper revocation procedure and escalated the permit dispute."
+    },
+    {
+      "name": "Dr. Gabriel Lambert",
+      "relation": "Site Advisor",
+      "note": "Questioned Benny's CL3 keycard and weapon, then revoked the weapon permit without much discussion."
+    },
+    {
+      "name": "Jinx",
+      "relation": "IPD",
+      "note": "Benny holds a petty grudge against her for somehow getting only him sick."
+    }
+  ],
+  "incidents": [
+    {
+      "title": "Weapon Permit Case",
+      "classification": "Administrative",
+      "body": "Benny's permit was not sought for authority or status, but for personal safety and the safety of nearby Foundation staff during site emergencies and extreme situations where running is not an option."
+    },
+    {
+      "title": "Archie Wright Death",
+      "classification": "Personnel",
+      "body": "Benny did not know Archie well outside of the permit matter, but the timing and lack of clarity surrounding his death remain concerning to him."
+    },
+    {
+      "title": "Alleged Meat Machine",
+      "classification": "Restricted",
+      "body": "The official explanation states that the images were AI-generated using Sora. Benny remains unconvinced, less because of the images themselves and more because of the unusual response from senior personnel."
+    }
+  ],
+  "privateNotes": [
+    "Benny still believes in the Foundation's purpose.",
+    "He does not believe every secret is malicious, but he has begun questioning which secrets are necessary and which are being hidden for convenience.",
+    "Ava Fernsby's disappearance, Archie Wright's death, and the Foundation Command response to the meat machine incident remain unresolved in his mind."
+  ],
+  "publicEye": [
+    "Seen as a competent technical worker with unusually strong patience for documentation.",
+    "More likely to argue through policy than through force.",
+    "Not considered a combatant, though previously held a weapon permit for emergency self-defense."
+  ],
+  "contradictions": [
+    "Believes in the Foundation mission, but distrusts some Foundation leadership.",
+    "Avoids unnecessary conflict, but once wrote more than twenty pages to defend a weapon permit.",
+    "Claims to only want safety, yet repeatedly ends up involved in high-level administrative disputes."
+  ],
+  "quotes": [
+    "I do not need authority. I need the ability to not die in a hallway.",
+    "If the paperwork says it can only be revoked under specific conditions, then those conditions should probably matter.",
+    "I believe in the mission. I am less certain about the people interpreting it."
+  ]
 }
