@@ -2,6 +2,7 @@
   "name": "Benny McQuail",
   "designation": "SITE-65 PERSONNEL DOSSIER",
   "status": "EXTENDED LEAVE",
+  "statusColor": "yellow",
   "risk": "LOW",
   "identity": {
     "class": "Former Senior Engineer",
@@ -10,7 +11,8 @@
     "clearance": "CL2, formerly authorized CL3 access",
     "age": "24",
     "background": "Former military engineer",
-    "id": "UNKNOWN"
+    "id": "UNKNOWN",
+    "photo": "/assets/images/scprp/personnel/benny-mcquail.webp"
   },
   "overview": [
     "Benny McQuail is a former military engineer who began his Foundation career as an IT Technician assigned to Site-65.",
@@ -44,7 +46,7 @@
     },
     {
       "title": "Permit Revocation and Reinstatement",
-      "body": "Dr. Gabriel Lambert revoked Benny's weapon permit without much warning. Site Advisor Yasutaka Hashimoto escalated the matter to Foundation Command, resulting in the permit being reinstated through an Overseers approval approval."
+      "body": "Dr. Gabriel Lambert revoked Benny's weapon permit without much warning. Site Advisor Yasutaka Hashimoto escalated the matter to Foundation Command, resulting in the permit being reinstated through Overseer approval."
     },
     {
       "title": "Meat Machine Incident",
