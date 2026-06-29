@@ -1,4 +1,3 @@
-// hooks.server.js
 import { fetchSession } from "$lib/server/sessionHandler";
 import {
   buildScpUrl,
@@ -10,11 +9,14 @@ import { redirect, error } from "@sveltejs/kit";
 
 export const handle = async ({ event, resolve }) => {
   const sessionID = event.cookies.get("session_id");
+  const hostname = event.url.hostname;
+  const isLocalHost = hostname === "localhost" || hostname === "127.0.0.1";
+
   event.locals.user = fetchSession(sessionID);
-  event.locals.isScpHost = isScpHostname(event.url.hostname);
+  event.locals.isScpHost = isScpHostname(hostname) || isLocalHost;
 
   const legacyScpPath = getScpPathFromLegacyPath(event.url.pathname);
-  if (legacyScpPath !== null) {
+  if (legacyScpPath !== null && !isLocalHost) {
     throw redirect(308, buildScpUrl(event.url, legacyScpPath).toString());
   }
 
