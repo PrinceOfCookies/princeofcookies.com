@@ -19,6 +19,25 @@
     "Known for technical competence, persistence, and a habit of solving administrative problems through excessive documentation.",
     "Benny believes in the Foundation mission, but recent events have left him suspicious of what Site Administration and Foundation Command may be hiding."
   ],
+  "documents": [
+    {
+        "id": "INT-65-MQ-00",
+        "title": "Audio Transcript: McQuail Suitability Interview",
+        "type": "Personnel Interview",
+        "clearance": 2,
+        "date": "██/██/20██",
+        "description": "Pre-employment suitability interview conducted prior to Site-65 assignment.",
+        "path": "/documents/mcquail-preemployment-interview"
+    },
+    {
+      "id": "LSAR-TECHIE-BQ-AM1-2",
+      "title": "Sidearm Authorization Request",
+      "type": "Weapon Permit",
+      "clearance": 2,
+      "description": "Formal E&TS sidearm authorization request submitted by Benny McQuail.",
+      "path": "/documents/sidearm-authorization-request"
+    }
+  ],
   "careerTimeline": [
     {
       "title": "Assigned to Site-65",

@@ -259,6 +259,55 @@
               </div>
             </section>
 
+            {#if arr(character.documents).length}
+              <section
+                class="rounded-2xl border border-white/10 bg-black/35 p-5"
+              >
+                <h2
+                  class="text-sm font-semibold tracking-[0.22em] text-white/80"
+                >
+                  RELEVANT DOCUMENTS
+                </h2>
+
+                <div class="mt-4 space-y-3">
+                  {#each arr(character.documents) as document}
+                    <a
+                      href={document.path}
+                      class="block rounded-xl border border-white/10 bg-black/25 p-4 transition hover:border-white/20 hover:bg-black/35"
+                    >
+                      <div class="flex items-start justify-between gap-4">
+                        <div>
+                          <div class="font-mono text-xs text-white/45">
+                            {document.id}
+                          </div>
+
+                          <h3 class="mt-1 text-sm font-semibold text-white/85">
+                            {document.title}
+                          </h3>
+
+                          <div class="mt-2 text-xs tracking-wide text-white/45">
+                            {document.type}
+                          </div>
+                        </div>
+
+                        <div
+                          class="rounded border border-white/10 bg-black/30 px-2 py-1 text-[10px] font-semibold tracking-wide text-white/60"
+                        >
+                          CL{document.clearance}
+                        </div>
+                      </div>
+
+                      {#if document.description}
+                        <p class="mt-3 text-sm leading-6 text-white/65">
+                          {document.description}
+                        </p>
+                      {/if}
+                    </a>
+                  {/each}
+                </div>
+              </section>
+            {/if}
+
             <section class="rounded-2xl border border-white/10 bg-black/35 p-5">
               <h2 class="text-sm font-semibold tracking-[0.22em] text-white/80">
                 PUBLIC EYE
@@ -307,18 +356,6 @@
                   </li>
                 {/each}
               </ul>
-            </section>
-
-            <section class="rounded-2xl border border-white/10 bg-black/35 p-5">
-              <h2 class="text-sm font-semibold tracking-[0.22em] text-white/80">
-                PRIVATE SELF-NOTES
-              </h2>
-
-              <div class="mt-4 space-y-3 text-sm leading-6 text-white/72">
-                {#each arr(character.privateNotes) as line}
-                  <p>{line}</p>
-                {/each}
-              </div>
             </section>
           </div>
 
@@ -418,6 +455,18 @@
                       </p>
                     </div>
                   </div>
+                {/each}
+              </div>
+            </section>
+
+            <section class="rounded-2xl border border-white/10 bg-black/35 p-5">
+              <h2 class="text-sm font-semibold tracking-[0.22em] text-white/80">
+                PRIVATE SELF-NOTES
+              </h2>
+
+              <div class="mt-4 space-y-3 text-sm leading-6 text-white/72">
+                {#each arr(character.privateNotes) as line}
+                  <p>{line}</p>
                 {/each}
               </div>
             </section>

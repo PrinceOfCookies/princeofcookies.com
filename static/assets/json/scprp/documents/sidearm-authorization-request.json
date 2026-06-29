@@ -1,0 +1,890 @@
+{
+    "draftId": "LSAR-TECHIE-BQ-AM1-2",
+    "type": "foundation_report",
+    "requiredClearance": "CL2",
+    "classification": "CLEARANCE LEVEL 2",
+    "fields": {
+      "title": "Sidearm Authorization Request",
+      "subtitle": "Engineering & Technical Services Defensive Sidearm Permit",
+      "documentId": "LSAR-TECHIE-BQ-AM1-2",
+      "submittedBy": "Benny McQuail",
+      "position": "Technical Expert",
+      "department": "E&TS",
+      "clearance": "Level 2",
+      "status": "Permit Request"
+    },
+    "pages": [
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": " SIDEARM AUTH REQUEST"
+          },
+          {
+            "type": "image",
+            "content": "New Image",
+            "params": {
+              "align": 0.5,
+              "scale": 0.75
+            },
+            "args": {
+              "url": "https://i.postimg.cc/V6WcVNS0/lmfao-1-256x256.png"
+            }
+          },
+          {
+            "type": "smalltext",
+            "content": "     Ethics Committee - Engineering & Technical Services"
+          },
+          {
+            "type": "smalltext",
+            "content": "\n\n"
+          },
+          {
+            "type": "paragraph",
+            "content": "       Submitted by: Benny McQuail"
+          },
+          {
+            "type": "paragraph",
+            "content": "        Position: Technical Expert"
+          },
+          {
+            "type": "paragraph",
+            "content": "              Department: E&TS"
+          },
+          {
+            "type": "paragraph",
+            "content": "             Clearance: Level 2"
+          },
+          {
+            "type": "header",
+            "content": "\n\n"
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": "Table Of Contents"
+          },
+          {
+            "type": "smalltext",
+            "content": "1. Purpose of Authorization"
+          },
+          {
+            "type": "smalltext",
+            "content": "2. Legal Authority & FLC Integration"
+          },
+          {
+            "type": "smalltext",
+            "content": "3. Definitions & Interpretive Standards"
+          },
+          {
+            "type": "smalltext",
+            "content": "4. Scope of Applicability"
+          },
+          {
+            "type": "smalltext",
+            "content": "5. Non-Combantant Status & Authority Limitations"
+          },
+          {
+            "type": "smalltext",
+            "content": "6. Mandatory Body Camera Requirement"
+          },
+          {
+            "type": "smalltext",
+            "content": "7. Conditions of Carry "
+          },
+          {
+            "type": "smalltext",
+            "content": "8. Authorized Use of Force"
+          },
+          {
+            "type": "smalltext",
+            "content": "9. Weapon Custody & Temporary Surrender Limitations"
+          },
+          {
+            "type": "smalltext",
+            "content": "10. Suspension Standards & Required Findings"
+          },
+          {
+            "type": "smalltext",
+            "content": "11. Investigation Procedures & Custody Extentions"
+          },
+          {
+            "type": "smalltext",
+            "content": "12. Administrative Review Timeline "
+          },
+          {
+            "type": "smalltext",
+            "content": "13. Acquisiton of weapon "
+          },
+          {
+            "type": "smalltext",
+            "content": "14. External Acquisition of Weapons"
+          },
+          {
+            "type": "smalltext",
+            "content": "15. Equipment & Modifcation Restrictions"
+          },
+          {
+            "type": "smalltext",
+            "content": "16. Reporting Requirements"
+          },
+          {
+            "type": "smalltext",
+            "content": "17. Site-65 Equipment Policy Exemption"
+          },
+          {
+            "type": "smalltext",
+            "content": "18. Evidence Preservation"
+          },
+          {
+            "type": "smalltext",
+            "content": "19. Permit Suspension, Revocation, & Reinstatement"
+          },
+          {
+            "type": "smalltext",
+            "content": "20. Non-Expansion Clause"
+          },
+          {
+            "type": "smalltext",
+            "content": "21. Signatures"
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header2",
+            "content": " Purpose of Authorization"
+          },
+          {
+            "type": "paragraph",
+            "content": "This document establishes a \ncontrolled administrative \nauthorization permitting the \nundersigned member of the Department \nof engineering and Technical Servers \n(E&TS) assigned to Site-65 to carry one \n(1) approved defensive sidearm while \npresent on Site grounds during \nassigned duties."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "This authorization exists solely to \nmitigate occupational risk accoiated \nwith  engineering operations \nconducted in hazardous or in \nenvironments where security response \nmay be delayed. The authorization is \ndefensive in nature and intended only \nto improve survivability during \nunforeseen emergencies involving \ncredible threats to Life."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "This permit does not grand combat \ndesignation, enforcement authority, \ninvestigative authority, arrest \nauthority, or command authority. The \npermit holder remains classifed as a \nnon-combatant Foundation Personnel."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": "Legal Authority & FLC Integration"
+          },
+          {
+            "type": "paragraph",
+            "content": "Actions taken stricty \nwithin Defensive Necessity shall not \nalone consitiute violations of the \nfollowing in the FLC: "
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "                 \u00a71.01 Murder"
+          },
+          {
+            "type": "paragraph",
+            "content": "           \u00a71.02 Attempted Murder"
+          },
+          {
+            "type": "paragraph",
+            "content": "             \u00a71.03 Manslaughter"
+          },
+          {
+            "type": "paragraph",
+            "content": "                 \u00a71.04 Battery"
+          },
+          {
+            "type": "paragraph",
+            "content": "             \u00a71.05 Endangerment"
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "All remaining Foundation Legal Codex \nremains fully enforceable, including \nbut not limited to \u00a71.08-\u00a71.12, \u00a72.08, \n\u00a72.17, \u00a73.01-\u00a73.09, \u00a74.01-\u00a74.08, and \u00a75.04"
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "This authorization does not create \nimmunity from Foundation law."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": "Definitions & Interpretive Standards "
+          },
+          {
+            "type": "header3",
+            "content": "         Immediate Threat"
+          },
+          {
+            "type": "paragraph",
+            "content": "   Imminent risk of death or severe \nbodily harm requiring immediate \naction."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "header3",
+            "content": "        Defensive Necessity"
+          },
+          {
+            "type": "paragraph",
+            "content": "Force required solely to stop an \nactive threat."
+          },
+          {
+            "type": "smalltext",
+            "content": " "
+          },
+          {
+            "type": "header3",
+            "content": "          Safe Withdrawl"
+          },
+          {
+            "type": "paragraph",
+            "content": "Retreat that does not increase danger"
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "header3",
+            "content": "        Proportional Force"
+          },
+          {
+            "type": "paragraph",
+            "content": "Minimum force required to stop the \nthreat."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "header3",
+            "content": "             Draw Event"
+          },
+          {
+            "type": "paragraph",
+            "content": "Any removal of the sidearm from its \nholster"
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "header3",
+            "content": "       Credible Safety Risk"
+          },
+          {
+            "type": "paragraph",
+            "content": "Observable unsafe handling, \nimpairment, refusal of lawful safety \ninstruction, or document unsafe \nstorage."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Interpretation shall rely exclusively \non these definitions."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": " Scope of Applicability"
+          },
+          {
+            "type": "paragraph",
+            "content": "Authorization applies only while on \nSite-65, and performing assigned  \nduties or traveling directly between \nauthorized work locations."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Authorization is automatically \nsuspended when: "
+          },
+          {
+            "type": "paragraph",
+            "content": " 1. Bodycamera is non functional."
+          },
+          {
+            "type": "paragraph",
+            "content": " 2. Permit is formally suspended."
+          },
+          {
+            "type": "paragraph",
+            "content": " 3. Weapon possession becomes \nunauthorized."
+          },
+          {
+            "type": "paragraph",
+            "content": " 4. Written Site Command suspension is \nissued under defined procedures."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Authorization is completely \ninvalidated when permit holder is \noff site"
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": "Non-Combantant Status & Authority Limitations"
+          },
+          {
+            "type": "paragraph",
+            "content": "The permit holder shall not:"
+          },
+          {
+            "type": "paragraph",
+            "content": "  1. Pursure Suspects."
+          },
+          {
+            "type": "paragraph",
+            "content": "  2. Participate in raids."
+          },
+          {
+            "type": "paragraph",
+            "content": "  3. Guard Checkpoints (This does not \ninclude manning CPC)"
+          },
+          {
+            "type": "paragraph",
+            "content": "  4. Escort D-Class"
+          },
+          {
+            "type": "paragraph",
+            "content": "  5. Enforce FLC."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Arrival of Security personnel \nimmediately terminates independent \ndefensive authority."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": "Mandatory Body Camera Requirement"
+          },
+          {
+            "type": "paragraph",
+            "content": "While carrying a sidearm, the permit \nholder shall wear a body camera at \nall times"
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "The body camera must continuously \nrecord audio and video during armed \ncarry and must remain unobstructed."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Mechanical malfunction does not \nconstitute misconduct only when it is \nreported."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Intentional disabling or alteration \nof video footage constitutes \nviolations of FLC \u00a75.04."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": "Conditions of Carry"
+          },
+          {
+            "type": "paragraph",
+            "content": "The sidearm shall remain holstered, \nfull secured, and under the immediate \ncontrol of the permit holder at all \ntimes unless required to be drawn \nunder the defined conditions in this \npermit."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Disengagement must be prioritized \nwhenever safely possible, and the \npermit holder must seek safe \nwithdrawl when faced with a threat \nwhenever safely possible."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header2",
+            "content": "  Authorized Use of Force"
+          },
+          {
+            "type": "paragraph",
+            "content": "Force is authorized only when all of \nthe following conditions are met: "
+          },
+          {
+            "type": "paragraph",
+            "content": " 1. Immediate Threat exists."
+          },
+          {
+            "type": "paragraph",
+            "content": " 2. Safe Withdrawl is not possible."
+          },
+          {
+            "type": "paragraph",
+            "content": " 3. Securiy response delay creates a \nlife threatening risk."
+          },
+          {
+            "type": "paragraph",
+            "content": " 4. Force used is proportional to the \nthreat."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Force must immediately cease when the \nthreat is neutralized. Failure to do so \nconstitutes a violation of FLC \u00a71.05, \n\u00a73.01, \u00a73.02, \u00a73.06, and \u00a73.08"
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": "Weapon Custody & Temporary Surrender Limitations"
+          },
+          {
+            "type": "paragraph",
+            "content": "Security personnel may require \ntemporary surrender of the sidearm \nfor safety reasons, but only under one \nof the following conditions: "
+          },
+          {
+            "type": "paragraph",
+            "content": " 1. Inside a Designated Disarm Zone."
+          },
+          {
+            "type": "paragraph",
+            "content": " 2. Observable Unsafe Handling."
+          },
+          {
+            "type": "paragraph",
+            "content": " 3. Evidence Preservation."
+          },
+          {
+            "type": "paragraph",
+            "content": " 4. Formally initiated Investigation."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Failure to return the weapon within \nthe alloted time without document \ncause constitutes escalation to the \nSite Administration."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Repeated short term removals may be \ngrounds of a formal investigation \ninto the permit holder's conduct and \nsuitability for continued \nauthorization."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": " Suspension Standards & Required Findings"
+          },
+          {
+            "type": "paragraph",
+            "content": "Authorization may be suspended only \nwhen atleast one of the following \nconditions is met: "
+          },
+          {
+            "type": "paragraph",
+            "content": " 1. Documented Unsafe discharge or \nnegligent discharge."
+          },
+          {
+            "type": "paragraph",
+            "content": " 2. Body camera footage verifying a \nviolation of the conditions of carry \nor authorized use of force"
+          },
+          {
+            "type": "paragraph",
+            "content": " 3. Written supervisory report of \nunsafe handling or credible safety \nrisk, pending investigation."
+          },
+          {
+            "type": "paragraph",
+            "content": " 4. Confirmed equipment tampering or \nintentional disabling of body camera."
+          },
+          {
+            "type": "paragraph",
+            "content": " 5. Removal from formal duties by \nmedical evaluation."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Suspicion alone is insufficent for \nsuspension, but may be grounds for \nincreased monitoring and safety \nmeasures pending investigation."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": "Investigation Procedures & Custody Extentions"
+          },
+          {
+            "type": "paragraph",
+            "content": "Opening a formal investigation does \nnot extend custody authority unless \nthe following condition is met: ."
+          },
+          {
+            "type": "paragraph",
+            "content": " 1. The permit holder is a formally \ndesignated subject of investigation in \nwriting."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Without this designation, the weapon \nmust be returned within the alloted \ntime or the situation will be escalated \nto Site Administration for resolution."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": "Administrative Review Timeline "
+          },
+          {
+            "type": "paragraph",
+            "content": "Administrative review must begin \nwithin 24 hours of report submission, \nand complete review and determination \nmust be made within 72 hours of report \nsubmission, unless extended by Site \nAdministration for good cause."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Good cause includes, but is not limited \nto: "
+          },
+          {
+            "type": "paragraph",
+            "content": " 1. Incomplete or delayed evidence \ncollection."
+          },
+          {
+            "type": "paragraph",
+            "content": " 2. Unavailability of key witnesses or \nevidence."
+          },
+          {
+            "type": "paragraph",
+            "content": " 3. Concurrently ongoing criminal \ninvestigation."
+          },
+          {
+            "type": "paragraph",
+            "content": " 4. Need for extended analysis of body \ncamera footage."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Failure to meet the inital 72 hour \ndeadline without good cause \nconstitutes a violation of this permit \nfrom the Foundations side and may be \ngrounds for escalation to the Ethics \nCommittee, or other site \nadministration oversight, depending \non the circumstances and severity of \nthe delay."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": " Acquisition Of Weapon"
+          },
+          {
+            "type": "paragraph",
+            "content": "Weapons must either be issued through \napproved foundation armories, or can \nbe a private weapon owned by the \npermit holder."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "The permit does not grant armory \naccess, but the permit holder may \nrequest an escort to an armory for the \npurpose of acquiring an approved \nweapon."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Upon obtaining a weapon from a \nfoundation armory, the permit holder \nis subject to a weapon check to verify \nthat the only weapon they took was a \nsingle approved defensive sidearm, \nand that they are not in possession of \nany unauthorized weapons or \nequipment."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": " External Acquisition of Weapons"
+          },
+          {
+            "type": "paragraph",
+            "content": "While this permit does not allow carry \nof weapons that are not sidearms, it \ndoes permit the acquisition of non \nsidearm weapons from the appropriate \nvendors, given that, once purchased, \nthe weapon is immediately stored in a \nstash"
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": "Equipment & Modifcation Restrictions ("
+          },
+          {
+            "type": "paragraph",
+            "content": "The only approved modifcations for \nsidearms carried under this \nauthorization are: "
+          },
+          {
+            "type": "paragraph",
+            "content": " 1. Laser Sight."
+          },
+          {
+            "type": "paragraph",
+            "content": " 2. Flashlight Attachment."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "No other modifications or attachments \nare approved for use under this \nauthorization, and the addition of \nunapproved modifications or \nattachments constitutes a violation of \nthis permit. and violations of \u00a72.08 \nand \u00a73.02 of thE FLC."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": "Reporting Requirements"
+          },
+          {
+            "type": "paragraph",
+            "content": "A report must be filed within 12 hours \nof any of the following events: "
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": " 1. Weapon Discharge"
+          },
+          {
+            "type": "paragraph",
+            "content": " 2. Any draw event, regardless of \nwhether it was authorized or not."
+          },
+          {
+            "type": "paragraph",
+            "content": " 3. Forced Surrender of sidearm"
+          },
+          {
+            "type": "paragraph",
+            "content": " 4. Body camera, or weapon malfunction"
+          },
+          {
+            "type": "paragraph",
+            "content": " 5. Loss, or expose of weapon in any \nway."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": "Site-65 Equipment Policy Exemption "
+          },
+          {
+            "type": "paragraph",
+            "content": "This sidearm permit serves as a \nformal, and documented exemption to \nthe standard Site-65 Equipment Policy. \nIt allows the permit holder, depsite \nnot being CL4 personnel, to lawfully, \nwithout breach of equipment policies, \nposses, and carry a sidearm while on \nsite. This applies solely within the \nscope defined by this permit, and does \nnot grant any additional equipment \nexemptions beyond what is stated."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": " Evidence Preservation"
+          },
+          {
+            "type": "paragraph",
+            "content": "Following an incident happening, the \npermit holder must avoid altering the \nscene, or any evidence related to the \nsituation, such as body footage, in any \nway; the permit holder must also \nsurrender the weapon immediately if \nrequested to do so by appropriate \nsecurity personnel or site \nadministrator. Tampering with the \nscene, or any evidence related to such \nconstitutes a violation of FLC \u00a75.04"
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": "Permit Suspension, Revocation, & Reinstatement"
+          },
+          {
+            "type": "paragraph",
+            "content": "Formal suspension of this perrmit \nrequires written justifcation \nreferencing defined findings and \npolicy violations."
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "If an investigation is to conclude \nwithout a sustained violation, the \nauthorization is immediately \nreinstated without reapplication."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": " Non-Expansion Clause"
+          },
+          {
+            "type": "paragraph",
+            "content": "No verbal instruction or precendt \nmodifies this permit in any way. "
+          },
+          {
+            "type": "smalltext",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Ammendments may be made to this \npermit by making alterations to the \ndocument, and having both sides agree \non the changes, while making sure the \noutline the reasons for them and/or \nwhat the benefit of this amendment \nwould be."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "elements": [
+          {
+            "type": "header",
+            "content": "        Signatures"
+          },
+          {
+            "type": "paragraph",
+            "content": ""
+          },
+          {
+            "type": "paragraph",
+            "content": "Applicant"
+          },
+          {
+            "type": "signature",
+            "content": "New Signature Box",
+            "uid": 985425842
+          },
+          {
+            "type": "line",
+            "content": "New Line"
+          },
+          {
+            "type": "paragraph",
+            "content": "Site Administration Representative"
+          },
+          {
+            "type": "signature",
+            "content": "New Signature Box",
+            "uid": 415232855
+          },
+          {
+            "type": "header",
+            "content": "\n\n\n\n"
+          },
+          {
+            "type": "paragraph",
+            "content": "     This permit is in effect as of"
+          },
+          {
+            "type": "paragraph",
+            "content": "                   02/03/\u2588\u2588\u2588\u2588"
+          }
+        ],
+        "effects": []
+      }
+    ]
+  }

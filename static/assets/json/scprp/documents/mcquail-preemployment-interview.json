@@ -1,0 +1,312 @@
+{
+  "draftId": "INT-65-MQ-00",
+  "type": "foundation_transcript",
+  "requiredClearance": "CL2",
+  "classification": "CLEARANCE LEVEL 2",
+  "fields": {
+    "title": "Audio Transcript: McQuail Suitability Interview",
+    "subtitle": "Pre-Employment Personnel Evaluation",
+    "subject": "Cpl. Benjamin \"Benny\" McQuail",
+    "ageAtRecording": "22",
+    "posting": "4 ESR, 5 CDSB Gagetown, New Brunswick",
+    "location": "Personnel Screening Room ██",
+    "recordingDate": "██/██/20██",
+    "status": "Personnel Record"
+  },
+  "pages": [
+    {
+      "elements": [
+        {
+          "type": "header",
+          "content": "Interview Transcript"
+        },
+        {
+          "type": "recording_event",
+          "event": "recorder_activated"
+        },
+        {
+          "type": "environment",
+          "event": "door_close"
+        },
+        {
+          "type": "environment",
+          "event": "chair_movement"
+        },
+        {
+          "type": "transcript_entry",
+          "speaker": "UNKNOWN MALE",
+          "content": "For the record, state your full name, current occupation, and current posting."
+        },
+        {
+          "type": "transcript_entry",
+          "speaker": "MCQUAIL",
+          "content": "Corporal Benjamin \"Benny\" McQuail, Const Tech, 4ESR at 5th Canadian Division Support Base Gagetown, New Brunswick."
+        },
+        {
+          "type": "environment",
+          "event": "paper_shuffle"
+        },
+        {
+          "type": "transcript_entry",
+          "speaker": "UNKNOWN MALE",
+          "content": "Construction Technician.\n\nInteresting choice.\n\nWhy construction engineering instead of combat engineering, electrical engineering, or mechanical systems?\n\nAnd before you answer, understand that I am not asking what the recruiting office answer is.\n\nI'm asking what your answer is."
+        },
+        {
+          "type": "transcript_entry",
+          "speaker": "MCQUAIL",
+          "content": "Simple math, honestly.\n\nIf the base fails, everything inside it goes down with it.\n\nYou can have the best vehicles and the sharpest tactics, but without a functional platform to launch from, you're dead in the water.\n\nI wanted to protect the foundation."
+        }
+      ],
+      "effects": []
+    },
+    {
+      "elements": [
+        {
+          "type": "pause",
+          "duration": "4 seconds"
+        },
+        {
+          "type": "environment",
+          "event": "pen_stops"
+        },
+        {
+          "type": "transcript_entry",
+          "speaker": "UNKNOWN MALE",
+          "content": "You said foundation.\n\nInteresting choice of wording.\n\nMost people say unit.\n\nOr base.\n\nOr country.\n\nYou said foundation.\n\nWhy?"
+        },
+        {
+          "type": "transcript_entry",
+          "speaker": "MCQUAIL",
+          "content": "Because a base is more than the buildings.\n\nIt's the power, the roads, the water, the comms, the storage, the workshops, the boring systems nobody thinks about until they stop working.\n\nI don't really see that as separate from the mission.\n\nPeople talk about protecting the country, protecting the unit, protecting the people beside them, and that's fine. But none of that works if the ground underneath them gives out.\n\nSo yeah, I said foundation.\n\nNot as a slogan or anything.\n\nThat's just what it is.\n\nIf you give me the blueprints to that foundation, I'll keep it standing.\n\nIt's what I do."
+        },
+        {
+          "type": "pause",
+          "duration": "6 seconds"
+        },
+        {
+          "type": "environment",
+          "event": "notebook_closes"
+        }
+      ],
+      "effects": []
+    },
+    {
+      "elements": [
+        {
+          "type": "transcript_entry",
+          "speaker": "UNKNOWN MALE",
+          "content": "Suppose the structure you're supporting extends beyond a single base.\n\nBeyond a single province.\n\nBeyond a single country.\n\nSuppose millions of people rely on systems they will never see, maintained by people they will never meet.\n\nWould your answer change?"
+        },
+        {
+          "type": "transcript_entry",
+          "speaker": "MCQUAIL",
+          "content": "No."
+        },
+        {
+          "type": "environment",
+          "event": "paper_shuffle"
+        },
+        {
+          "type": "transcript_entry",
+          "speaker": "UNKNOWN MALE",
+          "content": "Suppose the machinery keeping the world upright was not merely complicated.\n\nSuppose it was impossible.\n\nSuppose some of it actively resisted understanding.\n\nSuppose some parts wanted to be found.\n\nSuppose some parts wanted to find you.\n\nWould you still volunteer to maintain it?\n\nOr would there be a point where you decide the foundation should collapse?"
+        },
+        {
+          "type": "transcript_entry",
+          "speaker": "MCQUAIL",
+          "content": "You're asking if I have a breaking point.\n\nEveryone does.\n\nIf a system is actively malicious; if it's designed to destroy the people feeding it, then it's not a foundation anymore; it's a trap.\n\nBut if it's just hostile, stubborn, and weird?\n\nThat's just a bad shift on an old deployment.\n\nIf millions of people are relying on it to keep breathing, you don't pull the plug just because the machinery makes you uncomfortable.\n\nYou build a bigger cage around it, you double the dampeners, and you keep it running."
+        }
+      ],
+      "effects": []
+    },
+    {
+      "elements": [
+        {
+          "type": "audio_interference",
+          "severity": "moderate",
+          "content": [
+            "...candidate demonstrates preexisting conceptual compatibility...",
+            "...without exposure...",
+            "...unlikely to resist compartmentalization..."
+          ]
+        },
+        {
+          "type": "transcript_entry",
+          "speaker": "MCQUAIL",
+          "content": "What was that?"
+        },
+        {
+          "type": "transcript_entry",
+          "speaker": "UNKNOWN MALE",
+          "content": "Equipment issue."
+        },
+        {
+          "type": "pause",
+          "duration": "3 seconds"
+        },
+        {
+          "type": "transcript_entry",
+          "speaker": "UNKNOWN MALE",
+          "content": "Suppose the cage fails.\n\nSuppose one day you arrive at work and discover that the dampeners failed six hours ago.\n\nSuppose containment failed four hours ago.\n\nSuppose everyone who could fix the problem is already dead.\n\nWhat do you do?\n\nYou do not have reinforcements.\n\nYou do not have support.\n\nYou do not have orders.\n\nCommunication is unavailable.\n\nExtraction is unavailable.\n\nYou are not expected to survive.\n\nWhat do you do, Corporal McQuail?"
+        }
+      ],
+      "effects": []
+    },
+    {
+      "elements": [
+        {
+          "type": "audio_note",
+          "content": "Audio artifact present between timestamps ██:██:██ and ██:██:██. The following statement was not acknowledged by either participant during the interview."
+        },
+        {
+          "type": "audio_interference",
+          "severity": "high",
+          "content": [
+            "Please say yes."
+          ]
+        },
+        {
+          "type": "transcript_entry",
+          "speaker": "MCQUAIL",
+          "content": "If I'm the last one standing, then the mission isn't \"survive.\"\n\nThe mission is mitigation.\n\nI look for the fail-safes.\n\nEvery engineer builds a kill-switch into a dangerous system. Something meant to burn the house down before the fire spreads to the neighborhood.\n\nIf communication is dead and extraction is gone, my only job left is to pull that switch.\n\nI'll fight my way to the control console, lock the blast doors from the inside, and trigger the scuttle sequence.\n\nIf I'm not expected to survive, I might as well make sure the problem doesn't survive either."
+        },
+        {
+          "type": "pause",
+          "duration": "9 seconds"
+        },
+        {
+          "type": "transcript_entry",
+          "speaker": "UNKNOWN MALE",
+          "content": "Most people answer that question incorrectly.\n\nMost people say they'd run.\n\nSome say they'd fight.\n\nSome say they'd save themselves so they could warn others.\n\nYou looked for the containment procedures.\n\nInteresting."
+        }
+      ],
+      "effects": []
+    },
+    {
+      "elements": [
+        {
+          "type": "environment",
+          "event": "paper_shuffle"
+        },
+        {
+          "type": "transcript_entry",
+          "speaker": "UNKNOWN MALE",
+          "content": "Last question.\n\nThis one is important.\n\nSuppose you discover that the people giving the orders are wrong.\n\nNot malicious.\n\nNot corrupt.\n\nWrong.\n\nSuppose procedure says one thing.\n\nReality says another.\n\nSuppose following orders gets people killed.\n\nSuppose disobeying orders gets you court martialed.\n\nWho carries the responsibility?\n\nThe person who wrote the order?\n\nOr the person who followed it?"
+        },
+        {
+          "type": "audio_interference",
+          "severity": "low",
+          "content": [
+            "...looking for independent judgment..."
+          ]
+        },
+        {
+          "type": "transcript_entry",
+          "speaker": "MCQUAIL",
+          "content": "You're trying to see if I'm a rogue or a drone.\n\nI'm neither.\n\nIf an order is wrong because the leadership doesn't have the data on the ground, then it's my job to feed them the data.\n\nBut if there's no time, no comms, and people are dying?\n\nThe responsibility falls on me.\n\nI fix the problem first, and I argue with the lawyers later.\n\nIf you want a man who will blindly walk off a cliff because a piece of paper told him to, you brought the wrong Corporal into this room.\n\nI maintain the foundation.\n\nI don't let it collapse just to keep the paperwork clean."
+        },
+        {
+          "type": "recording_event",
+          "event": "recorder_deactivated"
+        }
+      ],
+      "effects": []
+    },
+    {
+      "elements": [
+        {
+          "type": "classification_banner",
+          "requiredClearance": "CL3",
+          "content": "SUPPLEMENTAL OBSERVER NOTES"
+        },
+        {
+          "type": "smalltext",
+          "requiredClearance": "CL3",
+          "content": "Compiled from witness testimony and post-interview reconstruction. Original audio recording concluded prior to the following exchange."
+        },
+        {
+          "type": "observer_note",
+          "requiredClearance": "CL3",
+          "content": "Subject remained seated for approximately four seconds following recorder deactivation."
+        },
+        {
+          "type": "observer_note",
+          "requiredClearance": "CL3",
+          "content": "Interviewer stated that the subject's final response was not considered part of the formal interview."
+        },
+        {
+          "type": "observer_note",
+          "requiredClearance": "CL3",
+          "content": "Subject requested identification of interviewing personnel. Interviewer declined to provide organizational affiliation."
+        },
+        {
+          "type": "observer_note",
+          "requiredClearance": "CL3",
+          "content": "Interviewer placed an unmarked contact card on the table and instructed subject to retain it."
+        },
+        {
+          "type": "observer_note",
+          "requiredClearance": "CL3",
+          "content": "Subject appeared confused but did not refuse the card."
+        },
+        {
+          "type": "observer_note",
+          "requiredClearance": "CL3",
+          "content": "Interviewer advised subject that he would eventually be offered a choice, then exited the room."
+        },
+        {
+          "type": "environment",
+          "requiredClearance": "CL3",
+          "event": "door_open"
+        },
+        {
+          "type": "environment",
+          "requiredClearance": "CL3",
+          "event": "footsteps_departing"
+        }
+      ],
+      "effects": []
+    },
+    {
+      "elements": [
+        {
+          "type": "classification_banner",
+          "requiredClearance": "CL3",
+          "content": "POST-INTERVIEW EVALUATION"
+        },
+        {
+          "type": "evaluation_note",
+          "requiredClearance": "CL3",
+          "content": "Subject displays strong containment-oriented thinking and an unusually high tolerance for ambiguity."
+        },
+        {
+          "type": "evaluation_note",
+          "requiredClearance": "CL3",
+          "content": "Subject repeatedly frames institutions, infrastructure, and societal systems as a singular \"foundation\" despite lacking contextual exposure to Foundation terminology."
+        },
+        {
+          "type": "evaluation_note",
+          "requiredClearance": "CL3",
+          "content": "Subject demonstrates independent judgment while maintaining strong procedural adherence."
+        },
+        {
+          "type": "evaluation_note",
+          "requiredClearance": "CL3",
+          "content": "Risk factors include elevated likelihood of future administrative conflict and willingness to deviate from standing orders during perceived emergency situations."
+        },
+        {
+          "type": "evaluation_note",
+          "requiredClearance": "CL3",
+          "content": "Recommendation: APPROVED FOR RECRUITMENT. Recommended assignment: Site-65 Technical Services Division. Continue observation."
+        },
+        {
+          "type": "signature",
+          "requiredClearance": "CL3",
+          "name": "████████ ████████",
+          "title": "Foundation Personnel Acquisition Division"
+        }
+      ],
+      "effects": []
+    }
+  ]
+}
