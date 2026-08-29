@@ -1,6 +1,6 @@
 export const SCP_SUBDOMAIN = "scp.princeofcookies.com";
 export const SCP_ROUTE_PREFIX = "/scprp";
-export const SCP_CHARACTER_SLUGS = ["benny-mcquail"];
+export const SCP_CHARACTER_SLUGS = ["benny-mcquail", "agnesa-beqiri"];
 
 export function isScpHostname(hostname) {
   return hostname === SCP_SUBDOMAIN;
