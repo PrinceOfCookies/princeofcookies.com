@@ -1,0 +1,122 @@
+{
+  "name": "Agnesa \"Wren\" Beqiri",
+  "designation": "RAISA PERSONNEL / GOI SUBJECT FILE",
+  "status": "AT-LARGE",
+  "statusColor": "red",
+  "risk": "MODERATE",
+  "identity": {
+    "class": "Former External Affairs Asset",
+    "department": "Formerly External Affairs / Current Chaos Insurgency",
+    "rank": "Intelligence Support Operative",
+    "clearance": "Former limited Foundation access",
+    "age": "UNKNOWN",
+    "background": "Former logistics liaison from Berat, Albania",
+    "id": "UNKNOWN",
+    "photo": "/assets/images/scprp/personnel/agnesa-beqiri.webp"
+  },
+  "overview": [
+    "Agnesa Beqiri is a former Foundation External Affairs logistics asset from Berat, Albania.",
+    "Following a failed containment transport incident near Berat, Agnesa was processed as a civilian witness before being recruited into Foundation External Affairs due to her knowledge of local logistics, records, and transport routes.",
+    "She was later kidnapped by Chaos Insurgency personnel during an operation targeting Foundation External Affairs assets. During assessment, the Insurgency identified her as a useful source of information rather than a simple hostage.",
+    "Agnesa now operates under the codename \"Wren\" as a Chaos Insurgency intelligence and support operative, with value in records analysis, cover-company tracking, and Foundation movement patterns."
+  ],
+  "documents": [
+    {
+      "id": "RAISA-GOI-BEQIRI-01",
+      "title": "RAISA Personnel / GOI Subject File: Agnesa Beqiri",
+      "type": "GOI Subject File",
+      "clearance": 3,
+      "date": "██/██/20██",
+      "description": "RAISA-maintained file on former Foundation External Affairs asset Agnesa Beqiri, now believed to operate under the Chaos Insurgency codename \"Wren\".",
+      "path": "/documents/raisa-agnesa-beqiri-wren-dossier"
+    }
+  ],
+  "careerTimeline": [
+    {
+      "title": "Civilian Logistics Background",
+      "body": "Born in Berat, Albania, Agnesa worked around civilian logistics, translation, shipping records, and regional transport documentation before any confirmed Foundation involvement."
+    },
+    {
+      "title": "Failed Transport Incident",
+      "body": "Agnesa became involved in the anomalous world after a Foundation-linked transport movement near Berat suffered a containment failure. Her awareness of irregular records made her an information risk."
+    },
+    {
+      "title": "Foundation Processing",
+      "body": "Initially processed as a civilian witness, Agnesa was later flagged by Foundation personnel due to her ability to identify cover company inconsistencies, altered routes, and false logistics records."
+    },
+    {
+      "title": "External Affairs Recruitment",
+      "body": "Rather than being fully amnesticized and released, Agnesa was recruited into a low-level External Affairs logistics role connected to Balkan regional operations."
+    },
+    {
+      "title": "Chaos Insurgency Kidnapping",
+      "body": "Agnesa was abducted during a Chaos Insurgency operation targeting Foundation External Affairs logistics assets. The cell initially treated her as a hostage and intelligence source."
+    },
+    {
+      "title": "Asset Reclassification",
+      "body": "During assessment, CI personnel determined that Agnesa had useful knowledge of Foundation cover systems, civilian cleanup procedures, and transport documentation."
+    },
+    {
+      "title": "Transfer to Current Cell",
+      "body": "Agnesa was transferred through Insurgency channels to another cell better suited to intelligence and records work. Her retraining is due to her irregular extraction and transfer path."
+    },
+    {
+      "title": "Codename: Wren",
+      "body": "Under the codename \"Wren\", Agnesa now works as a CI intelligence and support operative focused on records, logistics, Foundation movement, and official narrative weaknesses."
+    }
+  ],
+  "associates": [
+    {
+      "name": "Mira Dervishi",
+      "relation": "Possible CI contact / alias",
+      "note": "Believed to have been involved in Agnesa's initial assessment after her extraction. Identity unconfirmed."
+    },
+    {
+      "name": "Balkan Regional External Affairs Office",
+      "relation": "Former Foundation assignment",
+      "note": "Foundation administrative structure believed to have handled Agnesa's low-level External Affairs work."
+    },
+    {
+      "name": "Chaos Insurgency Cell",
+      "relation": "Current affiliation",
+      "note": "Specific cell assignment is unconfirmed. Subject is believed to require retraining due to irregular transfer history."
+    }
+  ],
+  "incidents": [
+    {
+      "title": "Berat Transport Failure",
+      "classification": "Anomalous / External Affairs",
+      "body": "A failed Foundation transport movement near Berat, Albania exposed Agnesa to anomalous activity and Foundation cleanup procedures."
+    },
+    {
+      "title": "External Affairs Asset Loss",
+      "classification": "Information Security",
+      "body": "Agnesa's kidnapping by CI resulted in the loss of a Foundation-trained External Affairs logistics asset with knowledge of civilian cover and transport procedures."
+    },
+    {
+      "title": "Suspected Defection",
+      "classification": "GOI",
+      "body": "RAISA classification was later amended from captured Foundation personnel to defected / GOI-aligned asset after continued cooperation with CI personnel was indicated."
+    }
+  ],
+  "privateNotes": [
+    "Agnesa does not appear to view herself as fully converted by the Chaos Insurgency.",
+    "Subject's hostility toward the Foundation appears rooted in memory alteration, altered civilian records, and the administrative erasure of incidents.",
+    "Subject may retain Foundation habits from External Affairs, including record preservation, route analysis, and narrative reconstruction."
+  ],
+  "publicEye": [
+    "Quiet, observant, and easy to overlook.",
+    "Not primarily known as a frontline combatant.",
+    "Most dangerous when given access to records, names, routes, or conflicting reports."
+  ],
+  "contradictions": [
+    "Distrusts Foundation secrecy, but now works for an organization known for its own compartmentalization.",
+    "Claims to oppose erased records, yet operates under an alias and hidden cell structure.",
+    "Not naturally violent, but continues to support hostile operations when they expose Foundation weaknesses."
+  ],
+  "quotes": [
+    "The Foundation does not just contain things. It edits the world around them.",
+    "A missing name is still a body. A corrected record is still a lie.",
+    "You can learn more from a changed document than an honest one."
+  ]
+}
